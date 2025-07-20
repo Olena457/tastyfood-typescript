@@ -1,13 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap");
 @import "tailwindcss";
 
-html {
-  scroll-behavior: smooth;
+:root {
+  --font-playfair-display: "Playfair Display", serif;
+  --font-inter: "Inter", sans-serif;
+  --screens-sm: 480px;
+  --screens-md: 768px;
+  --screens-lg: 1024px;
+  --screens-xl: 1280px;
+  --screens-2xl: 1536px;
+  --color-byby-200: oklch(76.864% 0.19529 327.246);
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  background-color: #ebf2a8;
-  line-height: 1.6;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #ebf2a8;
+    line-height: 1.6;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-playfair-display);
+  }
+  P {
+    font-family: var(--font-inter);
+  }
+  li {
+    font-family: var(--font-inter);
+  }
 }
 
+@layer components {
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--color-byby-200);
+    border-radius: var(--rounded-4xl);
+    padding: var(--spacing-6);
+    box-shadow: var(--shadow-xl);
+
+    width: var(--width-prose);
+    width: 200px;
+    height: auto;
+  }
+
+  /* .my-custom-button {
+    display: flex;
+    align-items: center;
+    background-color: blueviolet;
+    color: white;
+    border-radius: 20px;
+    padding: 15px;
+    font-size: 1rem;
+  } */
+}
+
+/* my own class for tailwind can use in code  */
+/* @layer utilities {
+  .rounded-4xl {
+    border-radius: 2rem; 
+  }
+  .w-50 {
+    width: 12.5rem;
+  }
+}  */
+/* @layer components {
+  .my-responsive-component {
+    padding: 1rem;
+
+    @media (min-width: var(--screens-sm)) {
+      padding: 2rem;
+    }
+
+    @media (min-width: var(--screens-md)) {
+      padding: 1.25rem;
+    }
+  }
+} */
