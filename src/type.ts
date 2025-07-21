@@ -28,7 +28,7 @@ export interface CategoriesResponse {
   categories: Category[] | null;
 }
 export interface RecipeState {
-  meals: Meal[] | null;
+  meals: Meal[];
   recipe: Meal | null;
   categories: Category[] | null;
   status: "idle" | "loading" | "succeeded" | "failed";
