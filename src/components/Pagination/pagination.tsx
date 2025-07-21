@@ -93,8 +93,8 @@ export default function Pagination({ totalPages }: PaginationProps) {
             disabled:opacity-50 disabled:cursor-not-allowed 
             transition-colors duration-200 ease-in-out text-sm sm:text-base
             focus:outline-none focus:ring-2
-         focus:ring-blue-500 focus:ring-opacity-50
-         mb-2 sm:mb-0"
+           focus:ring-blue-500 focus:ring-opacity-50
+           mb-2 sm:mb-0"
         aria-label="Previous page"
       >
         Prev
