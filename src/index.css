@@ -11,6 +11,12 @@
   --screens-xl: 1280px;
   --screens-2xl: 1536px;
   --color-byby-200: oklch(76.864% 0.19529 327.246);
+  --color-white-200: #ffffff;
+  --color-black-200: #000000;
+  --color-main-color: #007bff;
+  --color-main-light: #e6f2ff;
+  --color-hover-light: #cce0ff;
+  --color-hover-dark: #0056b3;
 }
 
 @layer base {
@@ -41,21 +47,79 @@
 }
 
 @layer components {
-  .card {
+  .item-card {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: var(--color-byby-200);
-    border-radius: var(--rounded-4xl);
-    padding: var(--spacing-6);
-    box-shadow: var(--shadow-xl);
-
-    width: var(--width-prose);
-    width: 200px;
-    height: auto;
+    padding: 24px;
+    min-width: 280px;
+    /* padding: 20px 15px; */
+    border-radius: 16px;
+    background-color: var(--color-white-200);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
 
-  /* .my-custom-button {
+  .item-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+  }
+
+  .item-image {
+    width: 100%;
+    /* width: 287px; */
+    height: 200px;
+    object-fit: cover;
+    object-position: 50% 15%;
+    border-radius: 16px;
+    margin-bottom: 24px;
+  }
+
+  .item-title {
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .learn-more-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 30px;
+    padding: 14px 0;
+    width: 80%;
+    margin-top: 10px;
+    color: var(--color-white-200);
+    background-color: var(--color-main-color);
+    transition: background-color 0.3s ease;
+  }
+
+  .learn-more-btn:hover,
+  .learn-more-btn:focus {
+    background-color: var(--color-hover-dark);
+    color: var(--color-black-200);
+  }
+
+  .favorite-btn {
+    border: none;
+    display: flex;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: var(--color-main-light);
+    color: var(--color-main-color);
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+  }
+  .favorite-btn:hover,
+  .favorite-btn:focus {
+    background-color: var(--color-hover-light);
+  }
+}
+
+/* .my-custom-button {
     display: flex;
     align-items: center;
     background-color: blueviolet;
@@ -64,7 +128,6 @@
     padding: 15px;
     font-size: 1rem;
   } */
-}
 
 /* my own class for tailwind can use in code  */
 /* @layer utilities {
