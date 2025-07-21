@@ -34,4 +34,5 @@ export interface RecipeState {
   status: "idle" | "loading" | "succeeded" | "failed";
   error: string | null;
   currentPage: number;
+  favorites: Meal[];
 }
