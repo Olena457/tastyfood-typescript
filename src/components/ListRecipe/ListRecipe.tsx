@@ -46,7 +46,7 @@ export default function ListRecipe() {
   }
 
   if (status === "failed") {
-    return <div>Помилка завантаження рецептів</div>;
+    return <div>Error loading recipes</div>;
   }
 
   const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
@@ -54,8 +54,23 @@ export default function ListRecipe() {
   const totalPages = Math.ceil(meals.length / ITEMS_PER_PAGE);
 
   return (
-    <div className="">
-      <ul className="">
+    <div
+      className="container mx-auto px-4
+                 sm:px-6
+                 md:px-8
+                 lg:px-12
+                 xl:px-16
+                 2xl:px-20
+                 py-8"
+    >
+      <ul
+        className="grid grid-cols-1 gap-5 justify-items-center bg-gray-50 p-5
+                   sm:grid-cols-1
+                   md:grid-cols-2
+                   lg:grid-cols-3
+                   xl:grid-cols-4
+                   2xl:grid-cols-6"
+      >
         {currentMeals.length > 0 ? (
           currentMeals.map((meal) => (
             <li key={meal.idMeal} className="">
@@ -63,7 +78,9 @@ export default function ListRecipe() {
             </li>
           ))
         ) : (
-          <li className="">Рецептів не знайдено</li>
+          <li className="col-span-full text-red-600 text-center text-lg py-10">
+            Recipe not found
+          </li>
         )}
       </ul>
       {totalPages > 1 && <Pagination totalPages={totalPages} />}
