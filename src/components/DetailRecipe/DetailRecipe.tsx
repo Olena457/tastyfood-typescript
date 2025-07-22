@@ -54,90 +54,76 @@ export default function DetailRecipe() {
     }
   }
 
-  const combinedIngredients: string[] = [];
-  for (let i = 0; i < ingredientNames.length; i++) {
-    combinedIngredients.push(`${ingredientMeasures[i]} ${ingredientNames[i]}`);
-  }
-
   return (
-    <div
-      className="container mx-auto px-4 py-8
-                 sm:px-6
-                 md:px-8
-                 lg:px-12
-                 xl:px-16
-                 2xl:px-20"
-    >
-      <div className="bg-white shadow-lg rounded-lg overflow-hidden md:flex">
-        <div className="md:w-1/2">
+    <div className="flex flex-col items-start rounded-2xl border border-gray-300 bg-white shadow-lg p-6 w-full">
+      <div className="flex flex-col md:flex-row justify-between items-start w-full mb-6 gap-6">
+        <div className="flex flex-col md:flex-row items-center md:items-start gap-5 w-full md:w-auto">
           <img
-            className="w-full h-64 object-cover object-center md:h-full"
             src={recipe.strMealThumb}
             alt={recipe.strMeal}
+            className="max-w-xs h-48 object-cover rounded-2xl flex-shrink-0 mx-auto md:w-[200px] md:h-[200px] md:mx-0"
           />
-        </div>
-
-        <div className="p-6 md:w-1/2 flex flex-col justify-between">
-          <div>
-            <p className="text-sm text-gray-600 mb-1">
-              <span className="font-semibold">Area:</span> {recipe.strArea}
+          <div className="w-full text-center md:text-left mt-4 md:mt-0">
+            <p className="font-normal text-sm leading-relaxed text-gray-800 pb-2">
+              Area: {recipe.strArea}
             </p>
-            <h1 className="text-3xl font-bold text-gray-900 mb-2">
+            <h3 className="font-semibold text-2xl leading-[133%] text-gray-900 pb-3">
               {recipe.strMeal}
-            </h1>
-            <p className="text-base text-gray-600 mb-1">
-              <span className="font-semibold">Category:</span>{" "}
-              {recipe.strCategory}
+            </h3>
+            <p className="font-normal text-base leading-relaxed text-gray-800 pb-2">
+              Category: {recipe.strCategory}
             </p>
-            <p className="text-sm text-gray-500 mb-4">
-              <span className="font-semibold">Tags:</span>{" "}
-              {recipe.strTags || "No tags available"}
+            <p className="font-normal text-base leading-relaxed text-gray-800 pb-4">
+              Tags: {recipe.strTags || "No tags available"}
             </p>
+            {recipe.strYoutube && (
+              <a
+                href={recipe.strYoutube}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-base leading-relaxed text-gray-900 no-underline hover:underline focus:underline block md:inline-block mt-4"
+              >
+                Watch cooking video
+              </a>
+            )}
           </div>
-
-          {recipe.strYoutube && (
-            <a
-              className="mt-4 inline-block bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded transition duration-300 ease-in-out"
-              href={recipe.strYoutube}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Watch Recipe
-            </a>
-          )}
         </div>
-      </div>
-
-      <div className="flex justify-center mt-6">
         <button
           type="button"
-          className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg shadow-md transition duration-300 ease-in-out"
+          className="w-full md:w-[240px] h-10 rounded-2xl border border-gray-300 bg-gray-100 cursor-pointer transition-colors duration-200 ease-in-out hover:bg-gray-300 hover:text-white focus:bg-gray-300 focus:text-white mt-6 md:mt-0"
         >
-          Add to Favorites
+          Add recipe to Shelf
         </button>
       </div>
 
-      <div className="mt-8 p-6 bg-white shadow-lg rounded-lg">
-        <h2 className="text-2xl font-bold mb-4">Instructions:</h2>
-        <div className="text-gray-700 leading-relaxed whitespace-pre-line">
+      <div className="mt-8 w-full">
+        <h4 className="font-semibold text-lg leading-relaxed text-gray-900 pb-3">
+          Instructions:
+        </h4>
+        <p className="font-normal text-base leading-relaxed text-gray-800 pb-4 whitespace-pre-line">
           {recipe.strInstructions}
-        </div>
+        </p>
       </div>
 
-      <div className="mt-8 p-6 bg-white shadow-lg rounded-lg">
-        <h2 className="text-2xl font-bold mb-4">Ingredients:</h2>
-        <ul className="space-y-2">
-          {combinedIngredients.length > 0 ? (
-            combinedIngredients.map((item, index) => (
+      <div className="mt-8 w-full">
+        <h4 className="font-semibold text-lg leading-relaxed text-gray-900 pb-3">
+          Ingredients:
+        </h4>
+        <ul>
+          {ingredientNames.length > 0 ? (
+            ingredientNames.map((ingredient, index) => (
               <li
                 key={index}
-                className="flex justify-between items-baseline border-b border-gray-200 pb-1"
+                className="flex justify-between w-full max-w-md font-normal text-base leading-relaxed text-gray-800 pt-[5px] border-b border-dashed border-gray-800"
               >
-                <span className="text-base text-gray-800">{item}</span>
+                <span>{ingredient}</span>
+                <span>{ingredientMeasures[index]}</span>
               </li>
             ))
           ) : (
-            <p className="text-gray-500 italic">No ingredients available</p>
+            <p className="font-normal text-base leading-relaxed text-gray-800 pb-[15px]">
+              No ingredients available
+            </p>
           )}
         </ul>
       </div>

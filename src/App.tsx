@@ -1,28 +1,30 @@
-// import ButtonBase from "./components/ButtonBase/ButtonBase";
-// return <ButtonBase />;
-
+import { Routes, Route } from "react-router-dom";
+import { Suspense, lazy } from "react";
+import Layout from "./components/Layout/Layout";
+import SkeletonCard from "./components/SkeletonCard/SkeletonCard";
+// import { useDispatch, useSelector } from 'react-redux';
+// const MainPage = lazy(() => import('./pages/MainPage/MainPage'));
+const HomePage = lazy(() => import("./pages/HomePage/HomePage"));
+const RecipePage = lazy(() => import("./pages/RecipePage/RecipePage"));
+const NotFoundPage = lazy(() => import("./pages/NotFoundPage/NotFoundPage"));
+const RecipeFavoritePage = lazy(
+  () => import("./pages/FavoritePage/FavoritePage")
+);
 const App: React.FC = () => {
   return (
     <>
-      <div className="bg-blue-500 sm:bg-red-500 lg:bg-amber-900">
-        <div className="card rounded-none">
-          <h1 className="text-3xl font-bold  outline-dashed text-blue-500">
-            Hello world!
-          </h1>
-          <ul>
-            <li>I am first </li>
-            <li>I am second</li>
-            <li>I am third</li>
-          </ul>
-          <p>this a simle text with new fonts</p>
-          <p>this a simle text with two fonts</p>
-
-          <button className="bg-emerald-400  rounded-4xl w-50">Click me</button>
-          <button className="my-custom-button"> No Click </button>
-        </div>
-      </div>
+      <Suspense fallback={<SkeletonCard />}>
+        <Layout>
+          <Routes>
+            {/* <Route path="/" element={<MainPage />} /> */}
+            <Route path="/home" element={<HomePage />} />
+            <Route path="/recipe/:id" element={<RecipePage />} />
+            <Route path="/favorites" element={<RecipeFavoritePage />} />
+            <Route path="*" element={<NotFoundPage />} />
+          </Routes>
+        </Layout>
+      </Suspense>
     </>
   );
 };
-
 export default App;
