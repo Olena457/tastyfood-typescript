@@ -26,7 +26,7 @@ export default function CardRecipe({ meal }: CardRecipeProps) {
           <button type="button">Show Recipe</button>
         </Link>
         <button className="favorite-btn">
-          {/* <FaHeart className="w-4 h-4" /> */}
+          💛{/* <FaHeart className="w-4 h-4" /> */}
         </button>
       </div>
     </div>

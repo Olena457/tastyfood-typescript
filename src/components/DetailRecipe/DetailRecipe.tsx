@@ -92,7 +92,7 @@ export default function DetailRecipe() {
           type="button"
           className="w-full md:w-[240px] h-10 rounded-2xl border border-gray-300 bg-gray-100 cursor-pointer transition-colors duration-200 ease-in-out hover:bg-gray-300 hover:text-white focus:bg-gray-300 focus:text-white mt-6 md:mt-0"
         >
-          Add recipe to Shelf
+          Add to Favorite
         </button>
       </div>
 

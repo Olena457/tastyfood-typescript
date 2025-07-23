@@ -1,33 +1,42 @@
 import { NavLink } from "react-router-dom";
+import clsx from "clsx";
 
 export default function Header() {
-  const baseLinkClasses =
-    "px-4 py-2 rounded-md transition-colors duration-200 ease-in-out";
-  const activeLinkClasses = "bg-blue-600 text-white shadow-md";
-  const inactiveLinkClasses =
-    "text-gray-700 hover:bg-gray-200 hover:text-gray-900";
   return (
-    <header className="bg-yellow-500 shadow-sm py-3">
-      <nav className="flex justify-center gap-4">
+    <header className="header-main">
+      <nav className="nav-wrapper">
         <NavLink
           to="/"
           className={({ isActive }) =>
-            `${baseLinkClasses} ${
-              isActive ? activeLinkClasses : inactiveLinkClasses
-            }`
+            clsx("nav-link-base", {
+              "nav-link-active": isActive,
+              "nav-link-inactive": !isActive,
+            })
           }
         >
-          All Recipes
+          Food
         </NavLink>
         <NavLink
           to="/favorites"
           className={({ isActive }) =>
-            `${baseLinkClasses} ${
-              isActive ? activeLinkClasses : inactiveLinkClasses
-            }`
+            clsx("nav-link-base", {
+              "nav-link-active": isActive,
+              "nav-link-inactive": !isActive,
+            })
           }
         >
-          Favorites Recipe
+          Favorites
+        </NavLink>
+        <NavLink
+          to="/cocktail"
+          className={({ isActive }) =>
+            clsx("nav-link-base", {
+              "nav-link-active": isActive,
+              "nav-link-inactive": !isActive,
+            })
+          }
+        >
+          Cocktails
         </NavLink>
       </nav>
     </header>

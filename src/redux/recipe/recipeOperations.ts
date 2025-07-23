@@ -7,7 +7,7 @@ import type {
   CategoriesResponse,
 } from "../../type";
 
-// axios.defaults.baseURL = "https://www.themealdb.com/api/json/v1/1";
+axios.defaults.baseURL = "https://www.themealdb.com/api/json/v1/1";
 
 export const fetchRecipe = createAsyncThunk<
   Meal[],
@@ -23,7 +23,7 @@ export const fetchRecipe = createAsyncThunk<
       url = "/filter.php";
       params = { c: category.trim() };
     } else {
-      url = "/search.php?f=a";
+      url = "/search.php?f=b";
     }
     const { data } = await axios.get<MealsResponse>(url, { params });
 

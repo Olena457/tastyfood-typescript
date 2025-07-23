@@ -36,3 +36,29 @@ export interface RecipeState {
   currentPage: number;
   favorites: Meal[];
 }
+export type SearchFormProps = {
+  searchTerm: string;
+  onSearchTermChange: (term: string) => void;
+  onSearchSubmit: (e: React.FormEvent) => void;
+  placeholder?: string;
+};
+export interface Cocktail {
+  id: string;
+  name: string;
+  ingredients: string[];
+  instructions: string;
+  // thumbnail: string;
+}
+
+export interface ApiNinjaCocktail {
+  name: string;
+  ingredients: string[];
+  instructions: string;
+}
+
+export interface CocktailState {
+  cocktails: Cocktail[];
+  status: "idle" | "loading" | "succeeded" | "failed";
+  error: string | null;
+  currentPage: number;
+}

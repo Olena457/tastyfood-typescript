@@ -7,6 +7,20 @@ import {
 } from "./recipeOperations";
 import type { Meal, Category, RecipeState } from "../../type";
 
+// Download favorites fromlocalStorage
+const loadFavoritesFromLocalStorage = (): Meal[] => {
+  try {
+    const serializedFavorites = localStorage.getItem("favorites");
+    if (serializedFavorites === null) {
+      return [];
+    }
+    return JSON.parse(serializedFavorites) as Meal[];
+  } catch (error) {
+    console.error("Failed to load favorites from localStorage:", error);
+    return [];
+  }
+};
+
 const initialState: RecipeState = {
   meals: [],
   recipe: null,
@@ -14,7 +28,7 @@ const initialState: RecipeState = {
   status: "idle",
   error: null,
   currentPage: 1,
-  favorites: [],
+  favorites: loadFavoritesFromLocalStorage(),
 };
 
 const recipeSlice = createSlice({

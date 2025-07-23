@@ -55,7 +55,7 @@ export default function ListRecipe() {
 
   return (
     <div
-      className="container mx-auto px-4
+      className="container mx-auto px-4 
                  sm:px-6
                  md:px-8
                  lg:px-12
@@ -64,7 +64,7 @@ export default function ListRecipe() {
                  py-8"
     >
       <ul
-        className="grid grid-cols-1 gap-5 justify-items-center bg-gray-50 p-5
+        className="grid grid-cols-1 gap-5 justify-items-center bg-yellow-50 p-5 rounded-lg 
                    sm:grid-cols-1
                    md:grid-cols-2
                    lg:grid-cols-3
