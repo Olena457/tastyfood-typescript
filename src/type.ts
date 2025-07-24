@@ -58,6 +58,8 @@ export interface ApiNinjaCocktail {
 
 export interface CocktailState {
   cocktails: Cocktail[];
+  selectedCocktail: Cocktail | null; //detail id
+  favorites: Cocktail[]; //favorite
   status: "idle" | "loading" | "succeeded" | "failed";
   error: string | null;
   currentPage: number;

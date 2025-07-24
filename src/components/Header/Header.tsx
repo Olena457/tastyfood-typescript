@@ -27,6 +27,7 @@ export default function Header() {
         >
           Favorites
         </NavLink>
+
         <NavLink
           to="/cocktail"
           className={({ isActive }) =>
