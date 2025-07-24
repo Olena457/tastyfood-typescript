@@ -11,7 +11,7 @@ export default function SearchForm({
   };
 
   return (
-    <div className="w-full flex-grow lg:flex-grow-0 lg:w-auto">
+    <div className="w-full flex-grow lg:flex-grow-0 lg:w-auto md:mb-[5px] lg:mb-0">
       <form
         onSubmit={onSearchSubmit}
         className="flex  flex-col gap-2 items-end md:flex-row md:items-center w-full lg:justify-end"

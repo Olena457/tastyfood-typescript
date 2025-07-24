@@ -1,42 +1,34 @@
-import { useState } from "react";
 import type { Cocktail } from "../../type";
 
-// const FALLBACK_BROKEN_IMAGE = ...; // **REMOVED**
+import FALLBACK_BROKEN_IMAGE from "../../assets/images/def.jpg";
 
 interface CocktailCardProps {
   cocktail: Cocktail;
 }
 
 export default function CocktailCard({ cocktail }: CocktailCardProps) {
-  const [isExpanded, setIsExpanded] = useState(false);
-
-  const toggleExpand = () => {
-    setIsExpanded(!isExpanded);
-  };
-
-  // const imageUrl = cocktail.thumbnail; // **REMOVED**
+  const imageUrl = cocktail.thumbnail;
 
   return (
-    <div className="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center relative overflow-hidden h-[500px] sm:h-[550px] md:h-[580px] lg:h-[600px] 2xl:h-[650px]">
-      {/* <img // **REMOVED**
+    <div className="item-card flex flex-col h-[560px] sm:h-[580px] md:h-[600px] lg:h-[620px] xl:h-[640px]">
+      <img
         src={imageUrl}
         alt={cocktail.name}
-        className="w-full h-48 object-cover rounded-t-lg mb-4"
+        className="item-image mb-4"
         onError={(e) => {
           e.currentTarget.src = FALLBACK_BROKEN_IMAGE;
           e.currentTarget.onerror = null;
         }}
-      /> */}
-      <div className="p-4 flex flex-col justify-between flex-grow w-full">
-        <h2 className="text-xl font-bold mb-2 text-gray-800">
-          {cocktail.name}
-        </h2>
-
-        <div className="text-gray-700 text-sm mb-2 text-left w-full">
+      />
+      <h2 className="item-title mb-2 line-clamp-2 px-4 text-center">
+        {cocktail.name}
+      </h2>
+      <div className="px-4 py-2 overflow-y-auto custom-scrollbar flex-grow">
+        <div className="text-center mb-4">
           <strong className="block text-base font-semibold text-gray-800 mb-1">
             Ingredients:
           </strong>
-          <ul className="list-disc list-inside px-4 max-h-[100px] overflow-y-auto">
+          <ul className="list-disc list-inside">
             {cocktail.ingredients.map((ingredient, index) => (
               <li key={index} className="mb-1 text-sm">
                 {ingredient}
@@ -44,34 +36,12 @@ export default function CocktailCard({ cocktail }: CocktailCardProps) {
             ))}
           </ul>
         </div>
-
-        <div className="text-gray-600 text-sm mt-4 text-left w-full flex-grow relative">
-          <strong className="block text-base font-semibold text-gray-800 mb-1">
+        <div className="text-center mb-4">
+          <strong className="block text-base font-semibold text-gray-800 mb-1 ">
             Instructions:
           </strong>
-          <p
-            className={`overflow-hidden transition-all duration-300 ${
-              isExpanded ? "max-h-full" : "max-h-[120px]"
-            }`}
-            style={{
-              display: "-webkit-box",
-              WebkitBoxOrient: "vertical",
-              WebkitLineClamp: isExpanded ? "unset" : 6,
-            }}
-          >
-            {cocktail.instructions}
-          </p>
-          {!isExpanded && cocktail.instructions.length > 200 && (
-            <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent pointer-events-none"></div>
-          )}
+          <p className="text-sm text-gray-600">{cocktail.instructions}</p>
         </div>
-
-        <button
-          onClick={toggleExpand}
-          className="mt-4 py-2 px-4 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors self-center w-full"
-        >
-          {isExpanded ? "Show Less" : "Learn More"}
-        </button>
       </div>
     </div>
   );

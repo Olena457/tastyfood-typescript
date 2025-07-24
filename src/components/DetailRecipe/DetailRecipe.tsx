@@ -83,14 +83,14 @@ export default function DetailRecipe() {
                 rel="noopener noreferrer"
                 className="font-semibold text-base leading-relaxed text-gray-900 no-underline hover:underline focus:underline block md:inline-block mt-4"
               >
-                Watch cooking video
+                Watch video
               </a>
             )}
           </div>
         </div>
         <button
           type="button"
-          className="w-full md:w-[240px] h-10 rounded-2xl border border-gray-300 bg-gray-100 cursor-pointer transition-colors duration-200 ease-in-out hover:bg-gray-300 hover:text-white focus:bg-gray-300 focus:text-white mt-6 md:mt-0"
+          className="w-full md:w-[200px] h-10 rounded-4xl border border-gray-500 bg-blue-500  text-amber-50   cursor-pointer transition-colors duration-200 ease-in-out hover:bg-gray-300 hover:text-black focus:bg-gray-400 focus:text-black mt-6 md:mt-0"
         >
           Add to Favorite
         </button>

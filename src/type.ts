@@ -47,7 +47,7 @@ export interface Cocktail {
   name: string;
   ingredients: string[];
   instructions: string;
-  // thumbnail: string;
+  thumbnail: string;
 }
 
 export interface ApiNinjaCocktail {
