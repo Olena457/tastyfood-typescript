@@ -2,6 +2,7 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 import type { Cocktail, ApiNinjaCocktail } from "../../type";
 import cocktailLocalImages from "../../data/cocktailLocalImages";
+
 const NINJA_API_KEY = import.meta.env.VITE_NINJA_API_KEY;
 const API_NINJAS_URL = "https://api.api-ninjas.com/v1/cocktail";
 

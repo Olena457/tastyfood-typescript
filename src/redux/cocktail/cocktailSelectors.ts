@@ -7,7 +7,6 @@ export const selectAllCocktails = (state: RootState) =>
 export const selectCocktailStatus = (state: RootState) =>
   state.cocktails.status;
 export const selectCocktailError = (state: RootState) => state.cocktails.error;
-// export const selectCocktailFavorites = (state: RootState) =>
-//   state.cocktails.favorites;
+
 export const selectSelectedCocktail = (state: RootState) =>
   state.cocktails.selectedCocktail; // id details

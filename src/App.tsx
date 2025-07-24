@@ -6,6 +6,7 @@ import SkeletonLoader from "./components/SkeletonLoader/SkeletonLoader";
 // const MainPage = lazy(() => import('./pages/MainPage/MainPage'));
 const HomePage = lazy(() => import("./pages/HomePage/HomePage"));
 const RecipePage = lazy(() => import("./pages/RecipePage/RecipePage"));
+const NutritionPage = lazy(() => import("./pages/NutritionPage/NutritionPage"));
 const CocktailPage = lazy(() => import("./pages/CocktailPage/CocktailPage"));
 
 const DetailCocktailPage = lazy(
@@ -28,6 +29,7 @@ const App: React.FC = () => {
             <Route path="/favorites" element={<RecipeFavoritePage />} />
             <Route path="/cocktail" element={<CocktailPage />} />
             <Route path="/cocktail/:id" element={<DetailCocktailPage />} />
+            <Route path="/nutrition" element={<NutritionPage />} />
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </Layout>

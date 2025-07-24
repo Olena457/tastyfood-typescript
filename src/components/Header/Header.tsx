@@ -39,6 +39,17 @@ export default function Header() {
         >
           Cocktails
         </NavLink>
+        <NavLink
+          to="/nutrition"
+          className={({ isActive }) =>
+            clsx("nav-link-base", {
+              "nav-link-active": isActive,
+              "nav-link-inactive": !isActive,
+            })
+          }
+        >
+          Nutrition
+        </NavLink>
       </nav>
     </header>
   );

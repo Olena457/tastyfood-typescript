@@ -59,8 +59,26 @@ export interface ApiNinjaCocktail {
 export interface CocktailState {
   cocktails: Cocktail[];
   selectedCocktail: Cocktail | null; //detail id
-  favorites: Cocktail[]; //favorite
   status: "idle" | "loading" | "succeeded" | "failed";
   error: string | null;
   currentPage: number;
+}
+
+export interface NutritionItem {
+  name: string;
+  fat_total_g: number;
+  fat_saturated_g: number;
+  sodium_mg: number;
+  potassium_mg: number;
+  cholesterol_mg: number;
+  carbohydrates_total_g: number;
+  fiber_g: number;
+  sugar_g: number;
+}
+
+export interface NutritionState {
+  nutritionData: NutritionItem[];
+  status: "idle" | "loading" | "succeeded" | "failed";
+  error: string | null;
+  searchQuery: string;
 }
