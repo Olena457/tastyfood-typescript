@@ -28,7 +28,7 @@ export default function CocktailList() {
     }
     if (status === "failed") {
       return (
-        <p className="text-red-500 text-center text-lg mt-8">
+        <p className="text-red-400 text-center text-lg mt-8">
           Error: {error || "Failed to load cocktails."}
         </p>
       );

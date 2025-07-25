@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useDispatch } from "react-redux";
 import type { AppDispatch } from "../../redux/store";
 import SearchForm from "../../components/SearchForm/SearchForm";
@@ -9,10 +9,10 @@ export default function CocktailsPage() {
   const [searchTerm, setSearchTerm] = useState("");
   const dispatch = useDispatch<AppDispatch>();
 
-  useEffect(() => {
-    dispatch(fetchCocktails({ search: "Margarita" }));
-    setSearchTerm("Margarita");
-  }, [dispatch]);
+  // useEffect(() => {
+  //   dispatch(fetchCocktails({ search: "Margarita" }));
+  //   setSearchTerm("Margarita");
+  // }, [dispatch]);
 
   const handleSearchTermChange = (term: string) => {
     setSearchTerm(term);
