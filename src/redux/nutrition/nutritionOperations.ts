@@ -1,9 +1,9 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
-import type { NutritionItem } from "../../type"; // Переконайтеся, що цей шлях правильний і містить NutritionItem
+import type { NutritionItem } from "../../type";
 
 const NINJA_API_KEY = import.meta.env.VITE_NINJA_API_KEY;
-const API_NINJAS_NUTRITION_URL = "https://api.api-ninjas.com/v1/nutrition"; // Специфічний URL для Nutrition API
+const API_NINJAS_NUTRITION_URL = "https://api.api-ninjas.com/v1/nutrition";
 
 interface FetchNutritionArgs {
   query: string;
