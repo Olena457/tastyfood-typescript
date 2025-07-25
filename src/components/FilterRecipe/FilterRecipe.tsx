@@ -20,15 +20,18 @@ export default function FilterRecipe() {
 
   return (
     <div className="w-full lg:w-auto lg:flex-shrink-0">
-      <label htmlFor="category-select" className="sr-only">
+      <label
+        htmlFor="category-select"
+        className="bg-[var(--color-main-color)] sr-only"
+      >
         Choose a category...
       </label>
       <select
         id="category-select"
         onChange={(e) => handleCategoryChange(e.target.value)}
-        className="border bg-yellow-50 border-gray-400 rounded-lg p-2 w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-full lg:w-[200px]"
+        className="border bg-yellow-50 border-gray-400 text-emerald-800  rounded-lg p-2 w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-full lg:w-[200px]"
       >
-        <option value="">Please choose...</option>
+        <option value=" ">Choose a category...</option>
         {categories &&
           categories.length > 0 &&
           categories?.map((category) => (

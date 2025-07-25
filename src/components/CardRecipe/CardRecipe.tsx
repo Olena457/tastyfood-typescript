@@ -38,7 +38,7 @@ export default function CardRecipe({ meal }: CardRecipeProps) {
           <p>Area: {areaName}</p>
           <p>Category: {categoryName}</p>
         </div>
-        <h3 className="item-title md:text-lg">{mealName}</h3>
+        <h3 className="item-title  text-gray-600 md:text-lg">{mealName}</h3>
       </div>
       <div className="flex items-center w-full mt-auto">
         <Link to={`/recipe/${idMeal}`} className="learn-more-btn">

@@ -25,12 +25,12 @@ export default function SearchForm({
           value={searchTerm}
           onChange={handleChange}
           placeholder={placeholder}
-          className="border bg-yellow-50 border-gray-500 rounded-lg px-4 py-2 w-full md:flex-grow-0 md:w-[250px] lg:w-[280px] xl:w-[350px]"
+          className="border bg-yellow-50  placeholder-green-700  border-gray-400 rounded-lg px-4 py-2 w-full md:flex-grow-0 md:w-[250px] lg:w-[280px] xl:w-[350px]"
         />
 
         <button
           type="submit"
-          className="bg-blue-500 text-white p-2 rounded w-auto mb-4 md:mb-0 md:w-[80px] flex-shrink-0"
+          className="bg-[var(--color-main-color)] text-[var(--color-heder)]  p-2 rounded-4xl w-auto mb-4 md:mb-0 md:w-[80px] flex-shrink-0"
         >
           Search
         </button>

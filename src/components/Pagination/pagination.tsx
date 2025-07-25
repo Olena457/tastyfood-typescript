@@ -62,7 +62,7 @@ export default function Pagination({ totalPages }: PaginationProps) {
           text-sm sm:text-base border-gray-300
                     ${
                       page === currentPage
-                        ? "bg-blue-600 text-white border-blue-600"
+                        ? "bg-[var(--color-main-color)]  text-[var(--color-heder)] border-[var(--color-heder)] "
                         : "bg-white text-gray-700 border-gray-300 hover:bg-gray-100 hover:text-gray-900"
                     }
                     ${
@@ -72,7 +72,7 @@ export default function Pagination({ totalPages }: PaginationProps) {
                     }
                     transition-colors duration-200 ease-in-out
                      focus:outline-none focus:ring-2
-                      focus:ring-blue-500 focus:ring-opacity-50 `}
+                      focus:ring[var(--color-main-color)]  focus:ring-opacity-50 `}
         disabled={typeof page === "string"}
         aria-label={
           typeof page === "number" ? `Go to page ${page}` : "Ellipsis"
@@ -88,13 +88,13 @@ export default function Pagination({ totalPages }: PaginationProps) {
       <button
         onClick={() => handlePageChange(currentPage - 1)}
         disabled={currentPage === 1}
-        className="px-4 py-2 mx-2 rounded-md
-             bg-blue-500 text-white-200 hover:bg-blue-600 
+        className="bg-[var(--color-main-color)] text-[var(--color-heder)]  p-2 rounded-4xl w-auto mb-4 md:mb-0 md:w-[80px] flex-shrink-0
+           text-white-200 hover:bg-green-800 
             disabled:opacity-50 disabled:cursor-not-allowed 
             transition-colors duration-200 ease-in-out text-sm sm:text-base
             focus:outline-none focus:ring-2
-           focus:ring-blue-500 focus:ring-opacity-50
-           mb-2 sm:mb-0"
+           focus:ringtext-[var(--color-heder)] focus:ring-opacity-50
+           sm:mb-0"
         aria-label="Previous page"
       >
         Prev
@@ -105,14 +105,14 @@ export default function Pagination({ totalPages }: PaginationProps) {
       <button
         onClick={() => handlePageChange(currentPage + 1)}
         disabled={currentPage === totalPages}
-        className="px-4 py-2 mx-2 rounded-md  bg-blue-500  text-white-200
+        className="bg-[var(--color-main-color)] text-[var(--color-heder)]  p-2 rounded-4xl w-auto mb-4 md:mb-0 md:w-[80px] flex-shrink-0
          hover:bg-hover-dark disabled:opacity-50 
          disabled:cursor-not-allowed
           transition-colors duration-200 ease-in-out  text-sm sm:text-base
           focus:outline-none focus:ring-2
-           focus:ring-blue-500 focus:ring-opacity-50
-          mb-2 sm:mb-0"
-        aria-label="Next page"
+           focus:ringtext-[var(--color-heder)] focus:ring-opacity-50
+          sm:mb-0"
+        aria-label="Next"
       >
         Next
       </button>

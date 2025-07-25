@@ -48,8 +48,11 @@ const NutritionPage: React.FC = () => {
   );
 
   return (
-    <div className="p-5 max-w-4xl mx-auto font-sans">
-      <h1 className="bg-yellow-200 border border-amber-600 text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl px-4 py-2  rounded">
+    <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20">
+      <h1
+        className="title font-semibold text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl
+            px-4 py-2 rounded"
+      >
         Nutrition Information
       </h1>
       <div className="flex justify-start w-full mt-2">
@@ -66,7 +69,7 @@ const NutritionPage: React.FC = () => {
         </p>
       )}
       {error && (
-        <p className="text-center text-lg text-red-500">Error: {error}</p>
+        <h4 className="text-center text-lg text-red-400">Error: {error}</h4>
       )}
       {status === "succeeded" && nutritionData.length === 0 && !error && (
         <p className="text-center text-lg text-gray-600 mt-4">

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import type { Cocktail } from "../../type";
-import FALLBACK_BROKEN_IMAGE from "../../assets/images/def.jpg";
+import FALLBACK_BROKEN_IMAGE from "../../assets/images/mango.jpg";
 
 interface CocktailCardProps {
   cocktail: Cocktail;

@@ -61,10 +61,10 @@ export default function ListRecipe() {
                  lg:px-12
                  xl:px-16
                  2xl:px-20
-                 py-8"
+                 py-4"
     >
       <ul
-        className="grid grid-cols-1 gap-5 justify-items-center bg-yellow-50 p-5 rounded-lg 
+        className="grid grid-cols-1 gap-5 justify-items-center p-5 rounded-lg 
                    sm:grid-cols-1
                    md:grid-cols-2
                    lg:grid-cols-3
