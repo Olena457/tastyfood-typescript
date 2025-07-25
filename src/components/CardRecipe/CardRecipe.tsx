@@ -49,8 +49,8 @@ export default function CardRecipe({ meal }: CardRecipeProps) {
           className={`favorite-btn ml-auto w-10 h-10 flex items-center justify-center rounded-full transition-colors duration-200 ease-in-out
                      ${
                        isFavorite
-                         ? "bg-red-100 text-red-600 hover:bg-red-200"
-                         : "bg-gray-100 text-gray-500 hover:bg-gray-200"
+                         ? "bg-green-300 text-red-400 hover:bg-red-300"
+                         : "bg-green-300 text-gray-500 hover:bg-green-400"
                      }`}
           onClick={handleToggleFavorite}
           aria-label={isFavorite ? "Remove from favorites" : "Add to favorites"}
