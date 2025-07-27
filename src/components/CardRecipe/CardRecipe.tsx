@@ -1,12 +1,13 @@
 import { Link } from "react-router-dom";
-import type { Meal } from "../../type";
-import { FaHeart, FaTrash } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
+import type { Meal } from "../../type";
+import { FaHeart } from "react-icons/fa6";
+import { CiTrash } from "react-icons/ci";
+import { selectFavorites } from "../../redux/recipe/recipeSelectors";
 import {
   addToFavorites,
   removeFromFavorites,
 } from "../../redux/recipe/recipeSlice";
-import { selectFavorites } from "../../redux/recipe/recipeSelectors";
 
 interface CardRecipeProps {
   meal: Meal;
@@ -40,7 +41,7 @@ export default function CardRecipe({ meal }: CardRecipeProps) {
         </div>
         <h3 className="item-title  text-gray-600 md:text-lg">{mealName}</h3>
       </div>
-      <div className="flex items-center w-full mt-auto">
+      <div className="flex items-center w-full  mt-auto">
         <Link to={`/recipe/${idMeal}`} className="learn-more-btn">
           <button type="button">Show Recipe</button>
         </Link>
@@ -49,13 +50,17 @@ export default function CardRecipe({ meal }: CardRecipeProps) {
           className={`favorite-btn ml-auto w-10 h-10 flex items-center justify-center rounded-full transition-colors duration-200 ease-in-out
                      ${
                        isFavorite
-                         ? "bg-green-300 text-red-400 hover:bg-red-300"
-                         : "bg-green-300 text-gray-500 hover:bg-green-400"
+                         ? "bg-[#a4be92]  hover:bg-[#93ae7f]"
+                         : "  bg-[#a4be92] hover:bg-[#93ae7f]"
                      }`}
           onClick={handleToggleFavorite}
           aria-label={isFavorite ? "Remove from favorites" : "Add to favorites"}
         >
-          {isFavorite ? <FaTrash /> : <FaHeart />}
+          {isFavorite ? (
+            <CiTrash color="#000000" className="w-5 h-5" />
+          ) : (
+            <FaHeart color="#5f8b5a" className="w-5 h-6" />
+          )}
         </button>
       </div>
     </div>

@@ -8,8 +8,9 @@ import {
   selectCocktailStatus,
   selectCocktailError,
 } from "../../redux/cocktail/cocktailSelectors";
+import { LiaCocktailSolid } from "react-icons/lia";
 
-import FALLBACK_BROKEN_IMAGE from "../../assets/images/def.jpg";
+import FALLBACK_BROKEN_IMAGE from "../../assets/images/mango.jpg";
 
 export default function DetailCocktail() {
   const dispatch = useDispatch<AppDispatch>();
@@ -65,6 +66,7 @@ export default function DetailCocktail() {
                 e.currentTarget.onerror = null;
               }}
             />
+            <LiaCocktailSolid color="#5f8b5a" />
             <div className="w-full text-center md:text-left mt-4 md:mt-0">
               <h3 className="font-semibold text-2xl leading-[133%] text-gray-900 pb-3">
                 {selectedCocktail.name}

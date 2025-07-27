@@ -38,7 +38,7 @@ export default function FavoritePage() {
             ))
           ) : (
             <p className=" col-span-full text-red-400 text-center text-lg py-10">
-              No favorite recipes found.
+              Choose your favorite recipes.
             </p>
           )}
         </ul>

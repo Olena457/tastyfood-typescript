@@ -1,13 +1,23 @@
+import { Link } from "react-router-dom";
 import lemonImage from "../../assets/images/lemon.jpg";
 import sushiImage from "../../assets/images/sushi.jpg";
 import meatImage from "../../assets/images/meat.jpg";
 import CountUp from "react-countup";
-import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
+import FooterMarquee from "../../components/FooterMarquee/FooterMarquee";
+import {
+  FaFacebook,
+  FaInstagram,
+  FaLinkedin,
+  FaTwitter,
+  FaUsers,
+} from "react-icons/fa";
+import { GiChefToque } from "react-icons/gi";
+
 export default function MainPage() {
   return (
     <div className="container mx-auto px-0 pb-0">
       <div className="flex flex-col md:flex-row-reverse items-stretch bg-[#a4be92] overflow-hidden ">
-        <div className="w-full md:w-2/3 p-2 flex flex-col items-center  bg-[#a4be92] justify-center">
+        <div className="w-full md:w-2/3 lg:w-7/12  p-2 flex flex-col items-center bg-[#a4be92] justify-center">
           <div
             className="grid grid-cols-2 gap-2 w-full mb-2"
             style={{ height: "240px" }}
@@ -28,11 +38,7 @@ export default function MainPage() {
             </div>
           </div>
 
-          <div className="w-full text-center py-2 bg-[#f5f5dc] px-4 mb-2 rounded-2xl">
-            <h4 className="text-[#5f8b5a] text-3xl font-script">
-              Food & drink
-            </h4>
-          </div>
+          {/* _________ */}
 
           <div
             className="w-full h-auto overflow-hidden rounded-2xl"
@@ -46,59 +52,81 @@ export default function MainPage() {
           </div>
         </div>
 
-        <div className="w-full md:w-1/3 p-4 flex flex-col justify-start text-[#466343]">
-          <h1 className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+        <div className="w-full md:w-1/3 lg:w-5/12 p-4 flex flex-col justify-start text-[#466343]">
+          <div className="w-full-logo text-center w-full-logo bg-gradient-to-r from-[#5f8b5a] via-[#dff5a0] to-[#5f8b5a] px-4 mb-4 rounded-2xl">
+            <GiChefToque color="#5f8b5a" className="w-6 h-6" />
+            <h4 className="text-[#5f8b5a] lg:text-3xl font-script py-2 p-x">
+              Food & Drink
+            </h4>
+          </div>
+          <h1 className="text-3xl sm:text-3xl md:text-2xl lg:text-4xl lg:mb-4 font-bold mb-4">
             Explore flavors: pick a recipe, prepare with joy.
           </h1>
-          <h4 className="text-base sm:text-lg text-[#f5f5dc] mb-2 bullet-h4">
+          <h4 className="text-base sm:text-lg lg:text-2xl text-[#f5f5dc] mb-2 bullet-h4">
             Easy recipes for any occasion.
           </h4>
-          <h4 className="text-base sm:text-lg text-[#f5f5dc] mb-2 bullet-h4">
+          <h4 className="text-base sm:text-lg lg:text-2xl text-[#f5f5dc] mb-2 bullet-h4">
             Delicious meals to fuel your day.
           </h4>
-          <h4 className="text-base sm:text-lg text-[#f5f5dc] mb-4 bullet-h4">
-            find out the amount of nutrients
+          <h4 className="text-base sm:text-lg lg:text-2xl text-[#f5f5dc] mb-4 bullet-h4">
+            Find out the amount of nutrients
           </h4>
 
-          <button className="explore-button mt-6 px-8 py-3 font-semibold rounded-full shadow-md bg-[#5f8b5a] text-[#f5f5dc] hover:bg-[#4a6b4a] transition-colors">
+          <Link
+            to="/home"
+            className="explore-button text-center md:mt-2 lg:mt-6 px-8 py-3 font-semibold rounded-full shadow-md bg-[#5f8b5a] text-[#f5f5dc] hover:bg-[#4a6b4a] transition-colors"
+          >
             Explore now
-          </button>
+          </Link>
 
-          <div className="hidden md:block mt-8 p-4 bg-[#5f8b5a]  text-center text-[#f5f5dc] rounded-2xl ">
-            <h5 className="text-xl font-bold mb-2">Active Users Right Now</h5>
-            <div className="text-4xl font-extrabold">
-              <CountUp start={0} end={12345} duration={2.75} separator=" " />
+          <div className="hidden md:block md:mt-7 mt-4 p-4 bg-[#5f8b5a] lg:p-4 lg:mt-8 text-center text-[#f5f5dc] rounded-2xl ">
+            <div className="flex items-center justify-center mb-2">
+              <FaUsers className="mr-2 w-6 h-6" />
+              <h5 className=" text-xl md:text-[14px] lg:text-2xl font-bold">
+                Active Users Right Now
+              </h5>
             </div>
-            <p className="text-sm opacity-80">and counting!</p>
-          </div>
-          <div className="flex justify-center space-x-6">
-            <a
-              href="https://www.linkedin.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white hover:text-gray-300 transition-colors"
-            >
-              <FaLinkedin size={30} />
-            </a>
-            <a
-              href="https://www.facebook.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[#f5f5dc] hover:text-gray-300 transition-colors"
-            >
-              <FaFacebook size={30} />
-            </a>
-            <a
-              href="https://www.instagram.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[#f5f5dc] hover:text-gray-300 transition-colors"
-            >
-              <FaInstagram size={30} />
-            </a>
+            <div className="text-3xl md:text-4xl lg:mt-4 lg:text-4xl font-extrabold">
+              <CountUp start={0} end={10999} duration={10.75} separator=" " />
+              <div className="flex justify-center mt-2 lg:mt-4 space-x-4 md:space-x-6 lg:space-x-8">
+                <a
+                  href="https://www.linkedin.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#f5f5dc] hover:text-gray-300 transition-colors"
+                >
+                  <FaLinkedin size={30} />
+                </a>
+                <a
+                  href="https://www.facebook.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#f5f5dc] hover:text-gray-300 transition-colors"
+                >
+                  <FaFacebook size={30} />
+                </a>
+                <a
+                  href="https://www.instagram.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#f5f5dc] hover:text-gray-300 transition-colors"
+                >
+                  <FaInstagram size={30} />
+                </a>
+                <a
+                  href="https://twitter.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#f5f5dc] hover:text-gray-300 transition-colors"
+                >
+                  <FaTwitter size={30} />
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+      <FooterMarquee />
     </div>
   );
 }

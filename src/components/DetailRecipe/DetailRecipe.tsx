@@ -5,6 +5,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { fetchRecipeById } from "../../redux/recipe/recipeOperations";
 import { selectRecipeState } from "../../redux/recipe/recipeSelectors";
 import type { Meal } from "../../type";
+import { FaYoutube } from "react-icons/fa";
 
 export default function DetailRecipe() {
   const dispatch = useDispatch<AppDispatch>();
@@ -71,9 +72,10 @@ export default function DetailRecipe() {
               href={recipe.strYoutube}
               target="_blank"
               rel="noopener noreferrer"
-              className="font-semibold text-base leading-relaxed text-gray-900 no-underline hover:underline focus:underline block md:inline-block"
+              className="font-semibold text-base leading-relaxed text-red-400 no-underline hover:underline focus:underline block md:inline-block"
             >
               Watch video
+              <FaYoutube color="red" />
             </a>
           )}
         </div>
@@ -123,7 +125,6 @@ export default function DetailRecipe() {
 
         <div className="flex flex-col w-full">
           <div className="w-full mt-4 md:mt-0">
-            {" "}
             <h4 className="font-semibold text-lg leading-relaxed text-gray-900 pb-3">
               Instructions:
             </h4>
