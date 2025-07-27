@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import type { Meal } from "../../type";
-// import { FaHeart, FaTrash } from "react-icons/fa";
+import { FaHeart, FaTrash } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 import {
   addToFavorites,
@@ -55,11 +55,9 @@ export default function CardRecipe({ meal }: CardRecipeProps) {
           onClick={handleToggleFavorite}
           aria-label={isFavorite ? "Remove from favorites" : "Add to favorites"}
         >
-          {isFavorite ? "🚯" : "💛"}
+          {isFavorite ? <FaTrash /> : <FaHeart />}
         </button>
       </div>
     </div>
   );
 }
-// <FaHeart className="w-5 h-5" />
-// <FaTrash className="w-5 h-5" />

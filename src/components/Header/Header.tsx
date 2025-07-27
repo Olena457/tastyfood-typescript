@@ -12,7 +12,7 @@ export default function Header() {
             <img src={dishLogo} alt="logo" className="header-logo" />
           </NavLink>
           <NavLink
-            to="/"
+            to="/home"
             className={({ isActive }) =>
               clsx("nav-link-base", {
                 "nav-link-active": isActive,
