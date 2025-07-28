@@ -7,7 +7,7 @@ export default function Header() {
       <div className="header-content-wrapper">
         <nav className="nav-wrapper">
           <NavLink
-            to="/main"
+            to="/"
             className="w-full-logo text-center  bg-gradient-to-r from-[#5f8b5a] via-[#dff5a0] to-[#5f8b5a] px-2  rounded-full"
           >
             <h6 className="text-[#5f8b5a] lg:text-3xl font-script py-2 px-2">

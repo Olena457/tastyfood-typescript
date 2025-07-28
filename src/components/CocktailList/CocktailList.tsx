@@ -1,58 +1,3 @@
-// import { useSelector } from "react-redux";
-// import {
-//   selectAllCocktails,
-//   selectCocktailStatus,
-//   selectCocktailError,
-// } from "../../redux/cocktail/cocktailSelectors";
-// import CocktailCard from "../CocktailCard/CocktailCard";
-
-// export default function CocktailList() {
-//   const cocktails = useSelector(selectAllCocktails);
-//   const status = useSelector(selectCocktailStatus);
-//   const error = useSelector(selectCocktailError);
-
-//   if (!cocktails || cocktails.length === 0) {
-//     if (status === "idle" || status === "loading") {
-//       return (
-//         <div className="text-center py-8">
-//           <p className="text-lg text-gray-600">Loading cocktails...</p>
-//         </div>
-//       );
-//     }
-//     if (status === "succeeded") {
-//       return (
-//         <p className="text-gray-600 text-center text-lg mt-8">
-//           No cocktails found. Try a different search!
-//         </p>
-//       );
-//     }
-//     if (status === "failed") {
-//       return (
-//         <p className="text-red-400 text-center text-lg mt-8">
-//           Error: {error || "Failed to load cocktails."}
-//         </p>
-//       );
-//     }
-//     return null;
-//   }
-
-//   return (
-//     <ul
-//       className="grid grid-cols-1 gap-5 justify-items-center bg-yellow-50 p-5 rounded-lg
-//                  sm:grid-cols-2
-//                  md:grid-cols-2
-//                  lg:grid-cols-3
-//                  xl:grid-cols-4
-//                  2xl:grid-cols-4"
-//     >
-//       {cocktails.map((cocktail) => (
-//         <li key={cocktail.id} className="w-full">
-//           <CocktailCard cocktail={cocktail} />
-//         </li>
-//       ))}
-//     </ul>
-//   );
-// }
 import { useSelector } from "react-redux";
 import {
   selectAllCocktails,
@@ -60,6 +5,7 @@ import {
   selectCocktailError,
 } from "../../redux/cocktail/cocktailSelectors";
 import CocktailCard from "../CocktailCard/CocktailCard";
+import freshImage from "../../assets/images/fresh.png";
 
 export default function CocktailList() {
   const cocktails = useSelector(selectAllCocktails);
@@ -69,7 +15,7 @@ export default function CocktailList() {
   if (status === "loading") {
     return (
       <div className="text-center py-8">
-        <p className="text-lg text-gray-600">Loading cocktails...</p>
+        <p className="text-lg text-[#5f8b5a]">Loading cocktails...</p>
       </div>
     );
   }
@@ -84,16 +30,23 @@ export default function CocktailList() {
 
   if (status === "idle" && cocktails.length === 0) {
     return (
-      <h5 className="text-gray-600 text-center text-lg mt-8">
-        Enter a cocktail name in the search bar to discover new drinks!
-      </h5>
+      <li className="col-span-full flex flex-col items-center justify-center py-0">
+        <h5 className="text-[#5f8b5a] text-center text-lg gap-2 flex flex-col items-center">
+          Looking for a cocktail recipe? Just type the name!
+          <img
+            src={freshImage}
+            alt="Delicious sushi"
+            className="w-40 h-40 object-contain"
+          />
+        </h5>
+      </li>
     );
   }
 
   if (status === "succeeded" && cocktails.length === 0) {
     return (
-      <p className="text-gray-600 text-center text-lg mt-8">
-        No cocktails found. Try a different search!
+      <p className="text-[#5f8b5a] text-center text-lg mt-8">
+        No cocktails not found. Try a different search!
       </p>
     );
   }
@@ -101,7 +54,7 @@ export default function CocktailList() {
   return (
     <ul
       className="grid grid-cols-1 gap-5 justify-items-center bg-yellow-50 p-5 rounded-lg
-                 sm:grid-cols-2
+                 sm:grid-cols-1
                  md:grid-cols-2
                  lg:grid-cols-3
                  xl:grid-cols-4

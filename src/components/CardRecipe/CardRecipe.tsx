@@ -35,11 +35,13 @@ export default function CardRecipe({ meal }: CardRecipeProps) {
     <div className="item-card p-5 md:px-[15px] md:py-[25px] xl:p-6">
       <img src={strMealThumb} alt={mealName} className="item-image" />
       <div className="flex flex-col items-start w-full mb-4">
-        <div className="flex gap-3 text-xs font-medium text-gray-600/50 mb-1 md:text-sm">
+        <div className="flex gap-3 text-xs font-medium text-gray-600/50 mb-1 truncate-single-line md:text-sm">
           <p>Area: {areaName}</p>
           <p>Category: {categoryName}</p>
         </div>
-        <h3 className="item-title  text-gray-600 md:text-lg">{mealName}</h3>
+        <h3 className="item-title truncate-single-line text-gray-600 md:text-lg">
+          {mealName}
+        </h3>
       </div>
       <div className="flex items-center w-full  mt-auto">
         <Link to={`/recipe/${idMeal}`} className="learn-more-btn">
@@ -59,7 +61,7 @@ export default function CardRecipe({ meal }: CardRecipeProps) {
           {isFavorite ? (
             <CiTrash color="#000000" className="w-5 h-5" />
           ) : (
-            <FaHeart color="#5f8b5a" className="w-5 h-6" />
+            <FaHeart color="#dff5a0" className="w-5 h-6" />
           )}
         </button>
       </div>

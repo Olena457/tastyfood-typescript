@@ -11,10 +11,6 @@
   --screens-xl: 1280px;
   --screens-2xl: 1536px;
   --color-footer: #a4be92;
-  /* --color-footer: #6ea945; */
-  /* --color-card: #ebf2a8; */
-  /* --color-footer: #5f8b5a; */
-  /* --color-heder: #f8ebcd; */
   --color-heder: #f8ebcd;
   --color-white-200: #f5f5dc;
   --color-black-200: #000000;
@@ -195,7 +191,7 @@ a {
   /* __________________________________ */
 
   .title {
-    color: var(--color-white-200);
+    color: #4f754b;
   }
   .item-card {
     display: flex;
@@ -227,7 +223,11 @@ a {
     font-size: 16px;
     font-weight: 700;
   }
-
+  .truncate-single-line {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
   .learn-more-btn {
     display: flex;
     justify-content: center;

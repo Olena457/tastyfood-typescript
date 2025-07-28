@@ -61,7 +61,7 @@ export default function DetailRecipe() {
   }
 
   return (
-    <div className="flex flex-col items-center rounded-2xl border border-gray-300 bg-white shadow-lg p-6 w-full max-w-5xl mx-auto">
+    <div className="flex flex-col items-center rounded-2xl border border-gray-300 bg-[#f5f5dc] shadow-lg p-6 w-full max-w-5xl mx-auto">
       <div className="flex flex-col md:flex-row md:items-center justify-between w-full mb-6">
         <div>
           <h3 className="font-semibold text-2xl leading-[133%] text-gray-900 pb-2">
@@ -75,20 +75,20 @@ export default function DetailRecipe() {
               className="font-semibold text-base leading-relaxed text-red-400 no-underline hover:underline focus:underline block md:inline-block"
             >
               Watch video
-              <FaYoutube color="red" />
+              <FaYoutube color="red" className="w-9 h-9" />
             </a>
           )}
         </div>
         <button
           type="button"
           onClick={handleGoBack}
-          className="w-full md:w-[200px] h-10 rounded-4xl border border-gray-500 bg-gray-100 text-gray-700 hover:bg-gray-200 focus:bg-gray-300 mt-4 md:mt-0 md:ml-4"
+          className="learn-more-btn w-[150px]"
         >
           Go Back
         </button>
       </div>
 
-      <div className="flex flex-col md:flex-row items-start w-full gap-6">
+      <div className="flex flex-col md:flex-row items-start  w-full gap-6">
         <div
           className="flex flex-col flex-shrink-0 mx-auto md:mx-0
                         md:w-[200px] lg:w-[300px] xl:w-[400px]"

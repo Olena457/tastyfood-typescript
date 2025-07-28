@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { fetchRecipe } from "../../redux/recipe/recipeOperations";
 import type { AppDispatch } from "../../redux/store";
+import { GiChefToque } from "react-icons/gi";
 
 import ListRecipe from "../../components/ListRecipe/ListRecipe";
 import FilterRecipe from "../../components/FilterRecipe/FilterRecipe";
@@ -24,14 +25,16 @@ export default function HomePage() {
   };
 
   return (
-    <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20">
+    <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-2 xl:px-16 2xl:px-20">
       <h1
-        className="title font-semibold text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl
-            px-4 py-2 rounded"
+        className="title gap-0 font-semibold text-center text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl
+                   px-4 py-2 rounded mb-2
+                   flex items-center justify-center sm:gap-2"
       >
+        <GiChefToque color="#5f8b5a" className="inline-block w-8 h-8" />
         Welcome to the Recipe App
       </h1>
-      <div className="my-4 flex flex-col lg:flex-row lg:gap-4 lg:items-center">
+      <div className="my-2 flex flex-col items-center gap-4 sm:flex-row sm:justify-center lg:justify-center lg:my-4">
         <SearchForm
           searchTerm={searchTerm}
           onSearchTermChange={handleSearchTermChange}

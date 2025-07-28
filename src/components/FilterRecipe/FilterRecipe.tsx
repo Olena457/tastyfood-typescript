@@ -19,7 +19,10 @@ export default function FilterRecipe() {
   };
 
   return (
-    <div className="w-full lg:w-auto lg:flex-shrink-0">
+    <div
+      className="w-full lg:w-auto lg:flex-shrink-0 
+    "
+    >
       <label
         htmlFor="category-select"
         className="bg-[var(--color-main-color)] sr-only"
