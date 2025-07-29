@@ -32,15 +32,17 @@ export default function DetailCocktail() {
 
   if (status === "loading") {
     return (
-      <div className="flex justify-center items-center min-h-screen text-lg text-gray-700">
-        Loading...
+      <div className="text-center py-8">
+        <h4 className="text-lg mt-9 text-[#5f8b5a]">
+          Loading cocktail recipe...
+        </h4>
       </div>
     );
   }
 
   if (status === "failed") {
     return (
-      <div className="text-center text-red-600 p-8">
+      <div className="text-center text-red-400 p-8">
         Error: {error || "Unknown error loading cocktail."}
       </div>
     );
@@ -48,7 +50,7 @@ export default function DetailCocktail() {
 
   if (!selectedCocktail) {
     return (
-      <div className="text-center text-gray-500 p-8">No cocktail found.</div>
+      <div className="text-center text-gray-500 p-8">No found cocktail.</div>
     );
   }
 

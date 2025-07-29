@@ -25,15 +25,17 @@ export default function DetailRecipe() {
 
   if (status === "loading") {
     return (
-      <div className="flex justify-center items-center min-h-screen text-lg text-gray-700">
-        Loading...
+      <div className="text-center py-8">
+        <h4 className="text-lg mt-9 text-[#5f8b5a]">
+          Loading detailed recipe ...
+        </h4>
       </div>
     );
   }
 
   if (status === "failed") {
     return (
-      <div className="text-center text-red-600 p-8">
+      <div className="text-center text-red-400 p-8">
         Error: {error || "Unknown error loading recipe."}
       </div>
     );

@@ -32,7 +32,7 @@ export default function FilterRecipe() {
       <select
         id="category-select"
         onChange={(e) => handleCategoryChange(e.target.value)}
-        className="border bg-yellow-50 border-gray-400 text-emerald-800  rounded-lg p-2 w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-full lg:w-[200px]"
+        className="border bg-yellow-50 border-gray-400 text-emerald-800  focus:outline-none focus:border-emerald-700 focus:ring-1 focus:ring-emerald-700 rounded-lg p-2 w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-full lg:w-[200px]"
       >
         <option value=" ">Choose a category...</option>
         {categories &&

@@ -38,8 +38,6 @@ export default function MainPage() {
             </div>
           </div>
 
-          {/* _________ */}
-
           <div
             className="w-full h-auto overflow-hidden rounded-2xl"
             style={{ height: "350px" }}

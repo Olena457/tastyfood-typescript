@@ -52,6 +52,7 @@ a {
   font-weight: inherit;
   line-height: inherit;
 }
+
 @layer components {
   .layout {
     background-color: var(--color-footer);

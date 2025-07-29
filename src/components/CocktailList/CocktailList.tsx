@@ -6,6 +6,7 @@ import {
 } from "../../redux/cocktail/cocktailSelectors";
 import CocktailCard from "../CocktailCard/CocktailCard";
 import freshImage from "../../assets/images/fresh.png";
+import SkeletonLoader from "../SkeletonLoader/SkeletonLoader";
 
 export default function CocktailList() {
   const cocktails = useSelector(selectAllCocktails);
@@ -13,11 +14,7 @@ export default function CocktailList() {
   const error = useSelector(selectCocktailError);
 
   if (status === "loading") {
-    return (
-      <div className="text-center py-8">
-        <p className="text-lg text-[#5f8b5a]">Loading cocktails...</p>
-      </div>
-    );
+    return <SkeletonLoader />;
   }
 
   if (status === "failed") {

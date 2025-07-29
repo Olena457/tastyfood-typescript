@@ -44,7 +44,7 @@ export default function ListRecipe() {
 
   if (status === "failed") {
     return (
-      <div className="text-red-600 text-center text-lg py-10">
+      <div className="text-red-400 text-center text-lg py-10">
         Error loading recipes: {error}
       </div>
     );

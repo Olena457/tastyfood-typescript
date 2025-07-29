@@ -82,9 +82,11 @@ const NutritionPage: React.FC = () => {
           </div>
         )}
         {status === "loading" && (
-          <p className="text-center text-lg text-gray-600">
-            Loading nutrition data...
-          </p>
+          <div className="text-center py-8">
+            <h4 className="text-lg mt-9 text-[#5f8b5a]">
+              Loading nutrient information ...
+            </h4>
+          </div>
         )}
         {error && (
           <h4 className="text-center text-lg text-red-400">Error: {error}</h4>

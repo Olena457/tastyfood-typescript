@@ -24,7 +24,7 @@ export default function Header() {
               })
             }
           >
-            Food
+            Dishes
           </NavLink>
           <NavLink
             to="/favorites"
@@ -58,7 +58,7 @@ export default function Header() {
               })
             }
           >
-            Nutrition
+            Nutrients
           </NavLink>
         </nav>
       </div>
