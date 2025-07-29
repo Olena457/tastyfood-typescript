@@ -3,6 +3,7 @@ import axios from "axios";
 import type { NutritionItem } from "../../type";
 
 const NINJA_API_KEY = import.meta.env.VITE_NINJA_API_KEY;
+
 const API_NINJAS_NUTRITION_URL = "https://api.api-ninjas.com/v1/nutrition";
 
 interface FetchNutritionArgs {

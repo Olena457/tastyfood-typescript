@@ -30,7 +30,7 @@ export default function SearchForm({
 
         <button
           type="submit"
-          className="bg-[var(--color-main-color)] text-[var(--color-heder)]  p-2 rounded-4xl w-auto mb-4 md:mb-0 md:w-[80px] flex-shrink-0"
+          className="bg-[var(--color-main-color)] hover:bg-[#819971] text-[var(--color-heder)] hover:text-gray-500 p-2 rounded-4xl w-auto mb-4 md:mb-0 md:w-[80px] flex-shrink-0"
         >
           Search
         </button>

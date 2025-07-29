@@ -14,7 +14,7 @@
   --color-heder: #f8ebcd;
   --color-white-200: #f5f5dc;
   --color-black-200: #000000;
-  /* --color-main-color: #2f4f4f; */
+  --color-main-dark-color: #204b2a;
   --color-main-color: #5f8b5a;
   --color-main-light: #e6f2ff;
 }
@@ -27,8 +27,6 @@
   body {
     margin: 0;
     padding: 0;
-    /* background-color: #ebf2a8; */
-    /* background-color: #fdf9eb; */
     line-height: 1.6;
   }
 
@@ -65,7 +63,6 @@ a {
     padding: 15px 20px;
     padding-top: 12px;
     padding-bottom: 12px;
-    /* _________ */
     position: relative;
   }
   /* _____________________ */
@@ -85,22 +82,7 @@ a {
     margin-right: 20px;
     flex-shrink: 0;
   }
-  /* .logo-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-    display: flex;
-    justify-content: center;
-    margin-right: 20px;
-    font-family: "Kursive", serif;
-    font-style: italic;
-    font-weight: bold;
-    font-size: 24px;
-    color: #204b2a;
-    white-space: nowrap;
-  } */
+
   .header-logo {
     height: 40px;
     width: auto;
@@ -118,7 +100,7 @@ a {
   @media (min-width: 300px) and (max-width: 425.999px) {
     .nav-wrapper {
       display: flex;
-      color: #204b2a;
+      color: var(--color-main-dark-color);
       justify-content: center;
       align-items: center;
       text-align: center;
@@ -156,7 +138,7 @@ a {
   .w-full-logo svg {
     margin-right: 8px;
   }
-  /* ______________________________ */
+  /* ______________________________ nav*/
   @media (min-width: 426px) {
     .nav-link-base {
       padding-left: 16px;
@@ -188,7 +170,7 @@ a {
       align-items: center;
     }
   }
-  /* __________________________________ */
+  /* _____________________card */
 
   .title {
     color: #4f754b;
@@ -245,7 +227,7 @@ a {
   .learn-more-btn:hover,
   .learn-more-btn:focus {
     background-color: var(--color-hover-dark);
-    color: var(--color-black-200);
+    color: rgba(97, 95, 95, 0.612);
   }
 
   .favorite-btn {
@@ -254,15 +236,14 @@ a {
     width: 48px;
     height: 48px;
     border-radius: 50%;
-    background-color: var(--color-main-light);
-    color: var(--color-main-color);
+    background-color: var(--color-footer);
     align-items: center;
     justify-content: center;
     margin-left: 10px;
   }
   .favorite-btn:hover,
   .favorite-btn:focus {
-    background-color: var(--color-hover-light);
+    background-color: #8cb172;
   }
 
   .custom-scrollbar::-webkit-scrollbar {

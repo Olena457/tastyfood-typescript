@@ -63,7 +63,7 @@ export default function Pagination({ totalPages }: PaginationProps) {
                     ${
                       page === currentPage
                         ? "bg-[var(--color-main-color)]  text-[var(--color-heder)] border-[var(--color-heder)] "
-                        : "bg-white text-gray-700 border-gray-300 hover:bg-gray-100 hover:text-gray-900"
+                        : "bg-[var(--color-white-200)] text-gray-700 border-gray-300 hover:bg-gray-100 hover:text-gray-900"
                     }
                     ${
                       typeof page === "string"

@@ -44,7 +44,10 @@ export default function CardRecipe({ meal }: CardRecipeProps) {
         </h3>
       </div>
       <div className="flex items-center w-full  mt-auto">
-        <Link to={`/recipe/${idMeal}`} className="learn-more-btn">
+        <Link
+          to={`/recipe/${idMeal}`}
+          className="learn-more-btn hover:bg-[#93ae7f]"
+        >
           <button type="button">Show Recipe</button>
         </Link>
 
@@ -61,7 +64,7 @@ export default function CardRecipe({ meal }: CardRecipeProps) {
           {isFavorite ? (
             <CiTrash color="#000000" className="w-5 h-5" />
           ) : (
-            <FaHeart color="#dff5a0" className="w-5 h-6" />
+            <FaHeart color="#f5f5dc" className="w-5 h-6" />
           )}
         </button>
       </div>

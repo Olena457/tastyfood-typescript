@@ -12,7 +12,7 @@ export default function Layout({ children }: LayoutProps) {
     <>
       {!isMainPage && <Header />}
       <div className="layout flex flex-col min-h-screen">
-        <main className="flex-grow container mx-auto px-4 py-4">
+        <main className="flex-grow container mx-auto px-4 xl:px-1 py-4">
           {children}
           <Outlet />
         </main>

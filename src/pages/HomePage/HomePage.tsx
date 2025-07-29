@@ -25,7 +25,7 @@ export default function HomePage() {
   };
 
   return (
-    <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-2 xl:px-16 2xl:px-20">
+    <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-1 xl:px-16 2xl:px-15">
       <h1
         className="title gap-0 font-semibold text-center text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl
                    px-4 py-2 rounded mb-2

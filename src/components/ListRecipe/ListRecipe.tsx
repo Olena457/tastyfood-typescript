@@ -60,8 +60,8 @@ export default function ListRecipe() {
                        sm:px-6
                        md:px-3
                        lg:px-12
-                       xl:px-16
-                       2xl:px-20
+                       xl:px-0
+                       2xl:px-10
                        py-2"
     >
       <ul
@@ -74,7 +74,7 @@ export default function ListRecipe() {
       >
         {meals.length === 0 && status === "succeeded" ? (
           <li className="col-span-full text-gray-500 text-center text-lg py-10">
-            Рецепти не знайдено за вашим запитом. Спробуйте інший пошук.
+            No recipes found for your search. Please try a different query.
           </li>
         ) : (
           currentMeals.map((meal) => (

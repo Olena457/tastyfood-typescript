@@ -63,31 +63,17 @@ export default function DetailRecipe() {
   return (
     <div className="flex flex-col items-center rounded-2xl border border-gray-300 bg-[#f5f5dc] shadow-lg p-6 w-full max-w-5xl mx-auto">
       <div className="flex flex-col md:flex-row md:items-center justify-between w-full mb-6">
-        <div>
-          <h3 className="font-semibold text-2xl leading-[133%] text-gray-900 pb-2">
-            {recipe.strMeal}
-          </h3>
-          {recipe.strYoutube && (
-            <a
-              href={recipe.strYoutube}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-semibold text-base leading-relaxed text-red-400 no-underline hover:underline focus:underline block md:inline-block"
-            >
-              Watch video
-              <FaYoutube color="red" className="w-9 h-9" />
-            </a>
-          )}
-        </div>
+        <h3 className="font-semibold text-2xl leading-[133%] text-gray-900 ">
+          {recipe.strMeal}
+        </h3>
         <button
           type="button"
           onClick={handleGoBack}
-          className="learn-more-btn w-[150px]"
+          className=" p-1 learn-more-btn w-[150px]"
         >
           Go Back
         </button>
       </div>
-
       <div className="flex flex-col md:flex-row items-start  w-full gap-6">
         <div
           className="flex flex-col flex-shrink-0 mx-auto md:mx-0
@@ -98,7 +84,17 @@ export default function DetailRecipe() {
             alt={recipe.strMeal}
             className="w-full aspect-square object-cover rounded-2xl"
           />
-
+          {recipe.strYoutube && (
+            <a
+              href={recipe.strYoutube}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-base leading-relaxed text-red-400 no-underline hover:underline focus:underline block md:inline-block"
+            >
+              Watch video
+              <FaYoutube color="red" className="w-10 h-10" />
+            </a>
+          )}
           <div className="w-full mt-6">
             <h4 className="font-semibold text-lg leading-relaxed text-gray-900 pb-3">
               Ingredients:
