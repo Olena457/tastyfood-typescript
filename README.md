@@ -24,7 +24,7 @@
   <img src="./src/assets/readme/drink.jpg" width="23%" height="130px" alt="drink"/>
   <img src="./src/assets/readme/nutrient.jpg" width="23%" height="130px" alt="nutrient"/>
   <img src="./src/assets/readme/categ.jpg" width="23%" height="130px" alt="detail"/>
-  <img src="./src/assets/readme/video.jpg" width="23%" height="130px" alt="video"/>
+  <img src="./src/assets/readme/video.jpg" width="23%" height="131px" alt="video"/>
 </div>
 
 ---
