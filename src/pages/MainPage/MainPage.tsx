@@ -54,7 +54,7 @@ export default function MainPage() {
           <div className="w-full-logo text-center w-full-logo bg-gradient-to-r from-[#5f8b5a] via-[#dff5a0] to-[#5f8b5a] px-4 mb-4 2xl:mb-2 rounded-2xl">
             <GiChefToque color="#5f8b5a" className="w-6 h-6" />
             <h4 className="text-[#5f8b5a] lg:text-3xl font-script py-2 p-x">
-              Food & Drink
+              Food & Drinks
             </h4>
           </div>
           <h1 className=" text-center text-3xl  sm:text-3xl md:text-xl lg:text-2xl lg:text-center lg:mb-4 xl:mb-2  2xl:mt-6 xl:text-4xl font-bold mb-4">
