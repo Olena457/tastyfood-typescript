@@ -7,7 +7,7 @@ import {
 } from "./recipeOperations";
 import type { Meal, Category, RecipeState } from "../../type";
 
-// Download favorites fromlocalStorage
+// dovnload favorite localStorage
 const loadFavoritesFromLocalStorage = (): Meal[] => {
   try {
     const serializedFavorites = localStorage.getItem("favorites");
@@ -21,6 +21,16 @@ const loadFavoritesFromLocalStorage = (): Meal[] => {
   }
 };
 
+// save favorite in localStorage
+const saveFavoritesToLocalStorage = (favorites: Meal[]): void => {
+  try {
+    const serializedFavorites = JSON.stringify(favorites);
+    localStorage.setItem("favorites", serializedFavorites);
+  } catch (error) {
+    console.error("Failed to save favorites to localStorage:", error);
+  }
+};
+
 const initialState: RecipeState = {
   meals: [],
   recipe: null,
@@ -28,7 +38,7 @@ const initialState: RecipeState = {
   status: "idle",
   error: null,
   currentPage: 1,
-  favorites: loadFavoritesFromLocalStorage(),
+  favorites: loadFavoritesFromLocalStorage(), // dovnload favorites
 };
 
 const recipeSlice = createSlice({
@@ -44,12 +54,14 @@ const recipeSlice = createSlice({
       );
       if (!exists) {
         state.favorites.push(action.payload);
+        saveFavoritesToLocalStorage(state.favorites); // save after added
       }
     },
     removeFromFavorites: (state, action: PayloadAction<string>) => {
       state.favorites = state.favorites.filter(
         (meal) => meal.idMeal !== action.payload
       );
+      saveFavoritesToLocalStorage(state.favorites); // updated after deleted
     },
   },
   extraReducers: (builder) => {

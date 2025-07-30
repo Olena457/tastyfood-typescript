@@ -15,15 +15,15 @@ export default function FavoritePage() {
                         flex items-center justify-center gap-2"
       >
         <GiChefToque color="#5f8b5a" className="inline-block w-8 h-8" />
-        Welcome to the Recipe App
+        Your favorite recipes
       </h1>
       <div
-        className="container mx-auto px-4
+        className="container mx-auto px-2
                            sm:px-6
                            md:px-3
-                           lg:px-12
-                           xl:px-16
-                           2xl:px-20
+                           lg:px-1
+                           xl:px-0
+                           2xl:px-10
                            py-2"
       >
         <ul
