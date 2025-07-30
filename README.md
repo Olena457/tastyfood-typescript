@@ -17,14 +17,14 @@
 ## 🌿 Gallery Preview
 
 <div style="display: flex; flex-wrap: wrap; gap: 15px;">
-  <img src="./src/assets/images/readme/main.jpg" width="23%" height="130px" alt="dishes"/>
-  <img src="./src/assets/images/readme/home.jpg" width="23%" height="130px" alt="home"/>
-  <img src="./src/assets/images/readme/favorite.jpg" width="23%" height="130px" alt="favorites"/>
-  <img src="./src/assets/images/readme/one.jpg" width="23%" height="130px" alt="one"/>
-  <img src="./src/assets/images/readme/drink.jpg" width="23%" height="130px" alt="drink"/>
-  <img src="./src/assets/images/readme/nutrient.jpg" width="23%" height="130px" alt="nutrient"/>
-  <img src="./src/assets/images/readme/categ.jpg" width="23%" height="130px" alt="detail"/>
-  <img src="./src/assets/images/readme/video.jpg" width="23%" height="130px" alt="video"/>
+  <img src="./src/assets/readme/main.jpg" width="23%" height="130px" alt="dishes"/>
+  <img src="./src/assets/readme/home.jpg" width="23%" height="130px" alt="home"/>
+  <img src="./src/assets/readme/favorite.jpg" width="23%" height="130px" alt="favorites"/>
+  <img src="./src/assets/readme/one.jpg" width="23%" height="130px" alt="one"/>
+  <img src="./src/assets/readme/drink.jpg" width="23%" height="130px" alt="drink"/>
+  <img src="./src/assets/readme/nutrient.jpg" width="23%" height="130px" alt="nutrient"/>
+  <img src="./src/assets/readme/categ.jpg" width="23%" height="130px" alt="detail"/>
+  <img src="./src/assets/readme/video.jpg" width="23%" height="130px" alt="video"/>
 </div>
 
 ---
@@ -51,19 +51,8 @@ This app is built with a modern frontend stack for optimal performance and maint
 - **React Router** - for smooth navigation
 - **clsx** — elegant conditional styling
 - **LocalStorage** - saving favorites directly in the browser
-- **React Icons** - Icon Styling
-
----
-
-## 🍽️ Icon Styling Suggestions
-
-For a more expressive UI, consider adding icons using **React Icons** or **Font Awesome**:
-
-- 🍔 `faBurger` or 🍝 `faUtensils` for dishes
-- 🍹 `faMartiniGlass` or 🥤 `faGlassWater` for drinks
-- 🧬 `faSeedling` for nutrients
-- ⭐ `faHeart` for favorites
-- 🎬 `faYoutube` for video links
+- **React-countup** - styles active users
+- **React Icons** - icon styling
 
 ```js
 export default tseslint.config([
