@@ -5,7 +5,7 @@ import type { AppDispatch } from "../../redux/store";
 import { fetchRecipe } from "../../redux/recipe/recipeOperations";
 import { selectRecipeState } from "../../redux/recipe/recipeSelectors";
 import { setPage } from "../../redux/recipe/recipeSlice";
-import Pagination from "../Pagination/Pagination";
+import ComponentPagination from "../ComponentPagination/ComponentPagination";
 import CardRecipe from "../CardRecipe/CardRecipe";
 import SkeletonLoader from "../SkeletonLoader/SkeletonLoader";
 
@@ -85,7 +85,7 @@ export default function ListRecipe() {
         )}
       </ul>
       {totalPages > 1 && meals.length > 0 && (
-        <Pagination totalPages={totalPages} />
+        <ComponentPagination totalPages={totalPages} />
       )}
     </div>
   );
