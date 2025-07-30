@@ -7,7 +7,7 @@
 ## ✨ What You Can Do
 
 - 🔍 _Search recipes for meals and drinks_
-- 🧠 _Explore nutrient content for each dishe_
+- 🧠 _Explore nutrient content for each dish_
 - ❤️ _Save your favorite recipes_
 - 🎥 _Watch preparation videos via YouTube (where available\*)_
 - 📱 _Enjoy fast navigation and responsive design_
@@ -24,7 +24,7 @@
   <img src="./src/assets/readme/drink.jpg" width="23%" height="130px" alt="drink"/>
   <img src="./src/assets/readme/nutrient.jpg" width="23%" height="130px" alt="nutrient"/>
   <img src="./src/assets/readme/categ.jpg" width="23%" height="130px" alt="detail"/>
-  <img src="./src/assets/readme/video.jpg" width="23%" height="133px" alt="video"/>
+  <img src="./src/assets/readme/video.jpg" width="23%" height="135px" alt="video"/>
 </div>
 
 ---
