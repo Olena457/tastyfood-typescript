@@ -72,7 +72,7 @@ export default function MainPage() {
 
           <Link
             to="/home"
-            className="explore-button text-center md:mt-2 lg:mt-6 xl:mt-0 2xl:mt-2 px-8 py-3 font-semibold rounded-full shadow-md bg-[#5f8b5a] text-[#f5f5dc] hover:bg-[#4a6b4a] transition-colors"
+            className="explore-button text-center md:mt-2 lg:mt-6 xl:mt-2 2xl:mt-4 px-8 py-3 font-semibold rounded-full shadow-md bg-[#5f8b5a] text-[#f5f5dc] hover:bg-[#4a6b4a] transition-colors"
           >
             Explore now
           </Link>
