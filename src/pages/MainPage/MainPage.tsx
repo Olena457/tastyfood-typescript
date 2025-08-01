@@ -53,20 +53,20 @@ export default function MainPage() {
         <div className="w-full md:w-1/3 lg:w-5/12 p-4 flex flex-col justify-start text-[#466343]">
           <div className="w-full-logo text-center w-full-logo bg-gradient-to-r from-[#5f8b5a] via-[#dff5a0] to-[#5f8b5a] px-4 mb-4 2xl:mb-2 rounded-2xl">
             <GiChefToque color="#5f8b5a" className="w-6 h-6" />
-            <h4 className="text-[#5f8b5a] lg:text-3xl font-script py-2 p-x">
+            <h4 className="text-[#5f8b5a] lg:text-3xl  font-script py-2 p-x">
               Food & Drinks
             </h4>
           </div>
-          <h1 className=" text-center text-3xl  sm:text-3xl md:text-xl lg:text-2xl lg:text-center lg:mb-4 xl:mb-2  2xl:mt-6 xl:text-4xl font-bold mb-4">
+          <h1 className=" text-center text-3xl  sm:text-3xl md:text-xl lg:text-2xl lg:text-center lg:mb-4 xl:mb-2  2xl:mt-5 xl:text-3xl 2xl:text-3xl font-bold mb-4">
             Discover taste: choose a dish, cook with joy.
           </h1>
-          <h4 className="text-base sm:ml-2 md:text-[16px] sm:text-lg lg:text-[18px] xl:text-[22px] text-[#f5f5dc] mb-2 bullet-h4">
+          <h4 className="text-base sm:ml-2 md:text-[16px] sm:text-lg lg:text-[18px] xl:text-[22px] 2xl:text-[20px] text-[#f5f5dc] mb-2 bullet-h4">
             Easy recipes for any occasion with simple ingredients.
           </h4>
-          <h4 className="text-base sm:ml-2 md:text-[16px] sm:text-lg lg:text-[18px] xl:text-[22px] text-[#f5f5dc] mb-2 bullet-h4">
+          <h4 className="text-base sm:ml-2 md:text-[16px] sm:text-lg lg:text-[18px] xl:text-[22px] 2xl:text-[20px] text-[#f5f5dc] mb-2 bullet-h4">
             Delicious meals to fuel your day and boost your mood.
           </h4>
-          <h4 className="text-base sm:ml-2 md:text-[16px] sm:text-lg lg:text-[18px] xl:text-[22px] text-[#f5f5dc] mb-4 bullet-h4">
+          <h4 className="text-base sm:ml-2 md:text-[16px] sm:text-lg lg:text-[18px] xl:text-[22px] 2xl:text-[20px] text-[#f5f5dc] mb-4 bullet-h4">
             Find out the amount of nutrients for balanced meals.
           </h4>
 
