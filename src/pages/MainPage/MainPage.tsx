@@ -57,27 +57,27 @@ export default function MainPage() {
               Food & Drinks
             </h4>
           </div>
-          <h1 className=" text-center text-3xl  sm:text-3xl md:text-xl lg:text-2xl lg:text-center lg:mb-4 xl:mb-2  2xl:mt-5 xl:text-2xl  font-bold mb-4">
+          <h1 className=" text-center text-3xl  sm:text-3xl md:text-xl lg:text-2xl lg:text-center lg:mb-4 xl:mb-2  2xl:mt-5 xl:text-3xl 2xl:text-4xl font-bold mb-4">
             Discover taste: choose a dish, cook with joy.
           </h1>
-          <h4 className="text-base sm:ml-2 md:text-[16px] sm:text-lg lg:text-[18px] xl:text-[18px]  text-[#f5f5dc] mb-2 bullet-h4">
+          <h4 className="text-base sm:ml-2 md:text-[16px] sm:text-lg lg:text-[18px] xl:text-[19px]  text-[#f5f5dc] mb-2 bullet-h4">
             Easy recipes for any occasion with simple ingredients.
           </h4>
-          <h4 className="text-base sm:ml-2 md:text-[16px] sm:text-lg lg:text-[18px] xl:text-[18px]  text-[#f5f5dc] mb-2 bullet-h4">
+          <h4 className="text-base sm:ml-2 md:text-[16px] sm:text-lg lg:text-[18px] xl:text-[19px]  text-[#f5f5dc] mb-2 bullet-h4">
             Delicious meals to fuel your day and boost your mood.
           </h4>
-          <h4 className="text-base sm:ml-2 md:text-[16px] sm:text-lg lg:text-[18px] xl:text-[18px]  text-[#f5f5dc] mb-4 bullet-h4">
+          <h4 className="text-base sm:ml-2 md:text-[16px] sm:text-lg lg:text-[18px] xl:text-[19px]  text-[#f5f5dc] mb-4 bullet-h4">
             Find out the amount of nutrients for balanced meals.
           </h4>
 
           <Link
             to="/home"
-            className="explore-button text-center md:mt-2 lg:mt-3 xl:mt-2 2xl:mt-4 px-8 py-3 font-semibold rounded-full shadow-md bg-[#5f8b5a] text-[#f5f5dc] hover:bg-[#4a6b4a] transition-colors"
+            className="explore-button text-center md:mt-2 lg:mt-4 xl:mt-6 2xl:mt-5 px-8 py-3 font-semibold rounded-full shadow-md bg-[#5f8b5a] text-[#f5f5dc] hover:bg-[#4a6b4a] transition-colors"
           >
             Explore now
           </Link>
 
-          <div className="hidden md:block md:mt-3 mt-4  p-4 bg-[#5f8b5a] lg:p-4 lg:mt-8  xl:mt-3 2xl:mt-9 text-center text-[#f5f5dc] rounded-2xl ">
+          <div className="hidden md:block md:mt-3 mt-4  p-4 bg-[#5f8b5a] lg:p-4 lg:mt-8  xl:mt-10 2xl:mt-9 text-center text-[#f5f5dc] rounded-2xl ">
             <div className="flex items-center justify-center mb-2">
               <FaUsers className="mr-2 w-6 h-6" />
               <h5 className=" text-xl md:text-[14px] lg:text-2xl font-bold">
