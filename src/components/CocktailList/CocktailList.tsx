@@ -49,19 +49,29 @@ export default function CocktailList() {
   }
 
   return (
-    <ul
-      className="grid grid-cols-1 mx-auto gap-5 justify-items-center  bg-amber-700 p-5 rounded-lg
+    <div
+      className="page-container mx-auto px-4
+                       sm:px-6
+                       md:px-3
+                       lg:px-12
+                       xl:px-0
+                       2xl:px-10
+                       py-2"
+    >
+      <ul
+        className="grid grid-cols-1 mx-auto gap-5 justify-items-center  bg-amber-700 p-5 rounded-lg
                  sm:grid-cols-1
                  md:grid-cols-2
                  lg:grid-cols-3
                  xl:grid-cols-4
                  2xl:grid-cols-4"
-    >
-      {cocktails.map((cocktail) => (
-        <li key={cocktail.id} className="w-full">
-          <CocktailCard cocktail={cocktail} />
-        </li>
-      ))}
-    </ul>
+      >
+        {cocktails.map((cocktail) => (
+          <li key={cocktail.id} className="w-full">
+            <CocktailCard cocktail={cocktail} />
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }
