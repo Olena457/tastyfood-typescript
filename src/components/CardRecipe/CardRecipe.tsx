@@ -34,7 +34,7 @@ export default function CardRecipe({ meal }: CardRecipeProps) {
   return (
     <div className="item-card p-5 md:px-[15px] md:py-[25px] xl:p-6">
       <img src={strMealThumb} alt={mealName} className="item-image" />
-      <div className="flex flex-col items-start w-full mb-4">
+      <div className="flex flex-col items-center w-full mb-4">
         <div className="flex gap-3 text-xs font-medium text-gray-600/50 mb-1 truncate-single-line md:text-sm">
           <p>Area: {areaName}</p>
           <p>Category: {categoryName}</p>
