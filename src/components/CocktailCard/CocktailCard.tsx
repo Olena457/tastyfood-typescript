@@ -9,7 +9,7 @@ export default function CocktailCard({ cocktail }: CocktailCardProps) {
   const imageUrl = cocktail.thumbnail;
 
   return (
-    <div className="item-card p-5 md:px-[15px] md:py-[25px] xl:p-6">
+    <div className="item-card p-5  align-center md:px-[15px] md:py-[25px] xl:p-6">
       <img
         src={imageUrl}
         alt={cocktail.name}

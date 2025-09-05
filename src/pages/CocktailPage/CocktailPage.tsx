@@ -25,12 +25,12 @@ export default function CocktailsPage() {
   };
 
   return (
-    <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-1 xl:px-10 2xl:px-9">
+    <div className="container mx-auto px-4 py-4 sm:px-6 md:px-8 lg:px-1 xl:px-10 2xl:px-9">
       <div className="flex flex-col items-center justify-center text-center py-1">
         <h1
           className="title font-semibold text-center text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl
                                px-4 py-2 rounded 
-                               flex items-center justify-center gap-2"
+                               flex items-center justify-center sm:gap-2"
         >
           <GiChefToque color="#5f8b5a" className="inline-block w-8 h-8" />
           Drink Recipes
