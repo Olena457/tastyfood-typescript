@@ -10,11 +10,6 @@ export default function CocktailsPage() {
   const [searchTerm, setSearchTerm] = useState("");
   const dispatch = useDispatch<AppDispatch>();
 
-  // useEffect(() => {
-  //   dispatch(fetchCocktails({ search: "Margarita" }));
-  //   setSearchTerm("Margarita");
-  // }, [dispatch]);
-
   const handleSearchTermChange = (term: string) => {
     setSearchTerm(term);
   };

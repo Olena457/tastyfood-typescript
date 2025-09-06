@@ -6,7 +6,7 @@ export default function DetailCocktailPage() {
     <>
       <h1
         className="title font-semibold text-center text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl
-                            px-4 py-2 rounded mb-8
+                            px-4 py-2 rounded mb-3
                             flex items-center justify-center gap-2"
       >
         <GiChefToque color="#5f8b5a" className="inline-block w-8 h-8" />

@@ -3,8 +3,32 @@ import type { PayloadAction } from "@reduxjs/toolkit";
 import { fetchCocktails, fetchCocktailById } from "./cocktailOperations";
 import type { Cocktail, CocktailState } from "../../type";
 
+// loading data sessionStorage
+const loadCocktailsFromSessionStorage = (): Cocktail[] => {
+  try {
+    const serializedCocktails = sessionStorage.getItem("cocktailSearchResults");
+    if (serializedCocktails === null) {
+      return [];
+    }
+    return JSON.parse(serializedCocktails) as Cocktail[];
+  } catch (error) {
+    console.error("Failed to load cocktails from sessionStorage:", error);
+    return [];
+  }
+};
+
+// save data in sessionStorage
+const saveCocktailsToSessionStorage = (cocktails: Cocktail[]): void => {
+  try {
+    const serializedCocktails = JSON.stringify(cocktails);
+    sessionStorage.setItem("cocktailSearchResults", serializedCocktails);
+  } catch (error) {
+    console.error("Failed to save cocktails to sessionStorage:", error);
+  }
+};
+
 const initialState: CocktailState = {
-  cocktails: [],
+  cocktails: loadCocktailsFromSessionStorage(), // loading during start
   selectedCocktail: null,
   status: "idle",
   error: null,
@@ -31,6 +55,7 @@ const cocktailSlice = createSlice({
           state.status = "succeeded";
           state.cocktails = action.payload;
           state.error = null;
+          saveCocktailsToSessionStorage(state.cocktails); // Зберігаємо тут
         }
       )
       .addCase(fetchCocktails.rejected, (state, action) => {

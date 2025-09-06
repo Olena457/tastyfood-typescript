@@ -20,7 +20,9 @@ export default function CocktailCard({ cocktail }: CocktailCardProps) {
         }}
       />
       <div className="flex flex-col items-start w-full mb-4">
-        <h3 className="item-title md:text-lg">{cocktail.name}</h3>
+        <h3 className="item-title  w-full truncate-single-line md:text-lg">
+          {cocktail.name}
+        </h3>
       </div>
       <div className="flex items-center w-full mt-auto">
         <Link

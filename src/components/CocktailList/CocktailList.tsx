@@ -50,7 +50,7 @@ export default function CocktailList() {
 
   return (
     <ul
-      className="grid grid-cols-1 mx-auto gap-5 justify-items-center  bg-amber-700 p-5 rounded-lg
+      className="grid grid-cols-1 mx-auto gap-5 justify-items-center pt-5  bg-amber-700  rounded-lg
                  sm:grid-cols-1
                  md:grid-cols-2
                  lg:grid-cols-3

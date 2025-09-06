@@ -55,19 +55,21 @@ export default function DetailCocktail() {
   }
 
   return (
-    <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 py-8">
-      <div className="flex flex-col items-start rounded-2xl border border-gray-300 bg-white shadow-lg p-6 w-full">
+    <div className="container mx-auto px-1 sm:px-2 md:px-8 lg:px-12 xl:px-16 2xl:px-20 py-8">
+      <div className="flex flex-col items-start rounded-2xl border border-gray-300 bg-white shadow-lg p-2 w-full">
         <div className="flex flex-col md:flex-row justify-between items-start w-full mb-6 gap-6">
           <div className="flex flex-col md:flex-row items-center md:items-start gap-5 w-full md:w-auto">
-            <img
-              src={selectedCocktail.thumbnail}
-              alt={selectedCocktail.name}
-              className="max-w-xs h-48 object-cover rounded-2xl flex-shrink-0 mx-auto md:w-[200px] md:h-[200px] md:mx-0"
-              onError={(e) => {
-                e.currentTarget.src = FALLBACK_BROKEN_IMAGE;
-                e.currentTarget.onerror = null;
-              }}
-            />
+            <div className=" w-full  h-auto overflow-hidden rounded-2xl flex-shrink-0 mx-auto ">
+              <img
+                src={selectedCocktail.thumbnail}
+                alt={selectedCocktail.name}
+                className=" max-w-[300px] h-48 object-cover rounded-2xl flex-shrink-0 mx-auto  md:mx-0"
+                onError={(e) => {
+                  e.currentTarget.src = FALLBACK_BROKEN_IMAGE;
+                  e.currentTarget.onerror = null;
+                }}
+              />
+            </div>
             <LiaCocktailSolid color="#5f8b5a" />
             <div className="w-full text-center md:text-left mt-4 md:mt-0">
               <h3 className="font-semibold text-2xl leading-[133%] text-gray-900 pb-3">
