@@ -8,7 +8,6 @@ import {
   selectCocktailStatus,
   selectCocktailError,
 } from "../../redux/cocktail/cocktailSelectors";
-import { LiaCocktailSolid } from "react-icons/lia";
 
 import FALLBACK_BROKEN_IMAGE from "../../assets/images/mango.jpg";
 
@@ -55,26 +54,25 @@ export default function DetailCocktail() {
   }
 
   return (
-    <div className="container mx-auto px-1 sm:px-2 md:px-8 lg:px-12 xl:px-16 2xl:px-20 py-8">
-      <div className="flex flex-col items-start rounded-2xl border border-gray-300 bg-white shadow-lg p-2 w-full">
-        <div className="flex flex-col md:flex-row justify-between items-start w-full mb-6 gap-6">
+    <div className="container mx-auto px-1 sm:px-2 md:p-8 lg:p-12 xl:p-16 2xl:p-40">
+      <div className="flex flex-col items-start rounded-2xl border border-gray-300 bg-[#f5f5dc] shadow-lg p-4 md:p-12 w-full">
+        <div className="flex flex-col md:flex-row justify-between items-start w-full  mb-6 gap-6">
           <div className="flex flex-col md:flex-row items-center md:items-start gap-5 w-full md:w-auto">
-            <div className=" w-full  h-auto overflow-hidden rounded-2xl flex-shrink-0 mx-auto ">
+            <div className="w-full text-center md:text-left mt-4 md:mt-0">
+              <h3 className="font-semibold text-2xl leading-[133%] text-gray-900 pb-3">
+                {selectedCocktail.name}
+              </h3>
+            </div>
+            <div className="w-full md:w-[350px] lg:w-[480px]  h-auto overflow-hidden rounded-2xl flex-shrink-0">
               <img
                 src={selectedCocktail.thumbnail}
                 alt={selectedCocktail.name}
-                className=" max-w-[300px] h-48 object-cover rounded-2xl flex-shrink-0 mx-auto  md:mx-0"
+                className=" h-48 object-cover w-full rounded-2xl flex-shrink-0 mx-auto  md:mx-0"
                 onError={(e) => {
                   e.currentTarget.src = FALLBACK_BROKEN_IMAGE;
                   e.currentTarget.onerror = null;
                 }}
               />
-            </div>
-            <LiaCocktailSolid color="#5f8b5a" />
-            <div className="w-full text-center md:text-left mt-4 md:mt-0">
-              <h3 className="font-semibold text-2xl leading-[133%] text-gray-900 pb-3">
-                {selectedCocktail.name}
-              </h3>
             </div>
           </div>
         </div>
@@ -82,7 +80,7 @@ export default function DetailCocktail() {
         <button
           type="button"
           onClick={handleGoBack}
-          className="w-full md:w-[200px] h-10 rounded-4xl border border-gray-500 bg-gray-100 text-gray-700 hover:bg-gray-200 focus:bg-gray-300 mt-4 md:mt-0 md:ml-auto" // Adjusted margin for potential right alignment
+          className="min-w-[200px] max-w-[400px] lg:ml-50 h-10 rounded-4xl border border-gray-500 bg-[#a4be92] text-gray-700 hover:text-cyan-50 hover:bg-[#93ae7f] focus:bg-[#93ae7f] mt-4 md:mt-50% " // Adjusted margin for potential right alignment
         >
           Go Back
         </button>

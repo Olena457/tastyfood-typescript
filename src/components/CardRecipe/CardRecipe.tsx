@@ -35,9 +35,9 @@ export default function CardRecipe({ meal }: CardRecipeProps) {
     <div className="item-card p-5 md:px-[15px] md:py-[25px] xl:p-6">
       <img src={strMealThumb} alt={mealName} className="item-image" />
       <div className="flex flex-col items-center w-full mb-4">
-        <div className="flex gap-3 text-xs font-medium text-gray-600/50 mb-1  md:text-sm">
-          <p>Area: {areaName}</p>
-          <p>Category: {categoryName}</p>
+        <div className="flex  w-full gap-3 text-xs font-medium text-gray-600/50 mb-1  md:text-sm">
+          <p className="truncate-single-line">Area: {areaName}</p>
+          <p className="truncate-single-line">Category: {categoryName}</p>
         </div>
         <h3 className="item-title w-full truncate-single-line text-gray-600 md:text-lg">
           {mealName}

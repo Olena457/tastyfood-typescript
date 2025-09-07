@@ -24,10 +24,10 @@ export default function CocktailCard({ cocktail }: CocktailCardProps) {
           {cocktail.name}
         </h3>
       </div>
-      <div className="flex items-center w-full mt-auto">
+      <div className="flex items-center justify-center w-full mt-auto">
         <Link
           to={`/cocktail/${encodeURIComponent(cocktail.id)}`}
-          className="learn-more-btn"
+          className="learn-more-btn  hover:bg-[#93ae7f]"
         >
           <button type="button">Show Recipe</button>
         </Link>

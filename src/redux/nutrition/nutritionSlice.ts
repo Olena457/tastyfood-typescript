@@ -3,8 +3,32 @@ import type { PayloadAction } from "@reduxjs/toolkit";
 import { fetchNutritionByQuery } from "./nutritionOperations";
 import type { NutritionState, NutritionItem } from "../../type";
 
+const loadNutritionFromSessionStorage = (): NutritionItem[] => {
+  try {
+    const serializedNutrition = sessionStorage.getItem(
+      "nutritionSearchResults"
+    );
+    if (serializedNutrition === null) {
+      return [];
+    }
+    return JSON.parse(serializedNutrition) as NutritionItem[];
+  } catch (error) {
+    console.error("Failed to load nutrition from sessionStorage:", error);
+    return [];
+  }
+};
+
+const saveNutritionToSessionStorage = (nutrition: NutritionItem[]): void => {
+  try {
+    const serializedNutrition = JSON.stringify(nutrition);
+    sessionStorage.setItem("nutritionSearchResults", serializedNutrition);
+  } catch (error) {
+    console.error("Failed to save nutrition to sessionStorage:", error);
+  }
+};
+
 const initialState: NutritionState = {
-  nutritionData: [],
+  nutritionData: loadNutritionFromSessionStorage(),
   status: "idle",
   error: null,
   searchQuery: "",
@@ -21,6 +45,7 @@ const nutritionSlice = createSlice({
       state.nutritionData = [];
       state.error = null;
       state.status = "idle";
+      sessionStorage.removeItem("nutritionSearchResults"); //  sessionStorage
     },
   },
   extraReducers: (builder) => {
@@ -35,6 +60,7 @@ const nutritionSlice = createSlice({
           state.status = "succeeded";
           state.nutritionData = action.payload;
           state.error = null;
+          saveNutritionToSessionStorage(state.nutritionData);
         }
       )
       .addCase(fetchNutritionByQuery.rejected, (state, action) => {

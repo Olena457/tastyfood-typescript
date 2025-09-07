@@ -20,7 +20,7 @@ export default function CocktailsPage() {
   };
 
   return (
-    <div className="container mx-auto px-4 py-4 sm:px-6 md:px-8 lg:px-1 xl:px-10 2xl:px-9">
+    <div className="container mx-auto px-4 py-4 md:px-6 lg:px-12 ">
       <div className="flex flex-col items-center justify-center text-center py-1">
         <h1
           className="title font-semibold text-center text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl

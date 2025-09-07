@@ -27,7 +27,7 @@ export default function CocktailList() {
 
   if (status === "idle" && cocktails.length === 0) {
     return (
-      <li className="col-span-full flex flex-col items-center justify-center py-0">
+      <div className="col-span-full flex flex-col items-center justify-center py-0">
         <h5 className="text-[#5f8b5a] text-center text-lg gap-2 flex flex-col items-center">
           Looking for a cocktail recipe? Just type the name!
           <img
@@ -36,7 +36,7 @@ export default function CocktailList() {
             className="w-40 h-40 object-contain"
           />
         </h5>
-      </li>
+      </div>
     );
   }
 
@@ -49,19 +49,29 @@ export default function CocktailList() {
   }
 
   return (
-    <ul
-      className="grid grid-cols-1 mx-auto gap-5 justify-items-center pt-5  bg-amber-700  rounded-lg
+    <div
+      className="container mx-auto px-0
+                       sm:px-6
+                       md:px-3
+                       lg:px-12
+                       xl:px-0
+                       2xl:px-10
+                       py-2"
+    >
+      <ul
+        className="grid grid-cols-1 gap-5 justify-items-center align-item-center pt-5  rounded-lg
                  sm:grid-cols-1
                  md:grid-cols-2
                  lg:grid-cols-3
                  xl:grid-cols-4
                  2xl:grid-cols-4"
-    >
-      {cocktails.map((cocktail) => (
-        <li key={cocktail.id} className="w-full">
-          <CocktailCard cocktail={cocktail} />
-        </li>
-      ))}
-    </ul>
+      >
+        {cocktails.map((cocktail) => (
+          <li key={cocktail.id}>
+            <CocktailCard cocktail={cocktail} />
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }

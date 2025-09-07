@@ -71,7 +71,7 @@ export default function DetailRecipe() {
         <button
           type="button"
           onClick={handleGoBack}
-          className=" p-1 learn-more-btn w-[150px]"
+          className="p-1 learn-more-btn w-[150px] hover:bg-[#93ae7f]"
         >
           Go Back
         </button>
